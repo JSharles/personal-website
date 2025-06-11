@@ -23,7 +23,7 @@ const LandingPage: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-8">Ready to Work Together?</h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Let's discuss your project and bring your ideas to life.
+            Let&apos;s discuss your project and bring your ideas to life.
           </p>
           <Button size="lg" className="gap-2">
             Get In Touch <ArrowRight className="h-4 w-4" />
