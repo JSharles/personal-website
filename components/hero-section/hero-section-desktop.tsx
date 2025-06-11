@@ -1,8 +1,9 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
 import Image from "next/image";
-import ShinyText from "../ShinyText/ShinyText";
+
 import GradientText from "../GradientText/GradientText";
+import Link from "next/link";
 
 export const HeroSectionDesktop = () => {
   const gradientColors = [
@@ -15,6 +16,7 @@ export const HeroSectionDesktop = () => {
 
   return (
     <section className="h-screen w-full relative flex flex-col overflow-hidden px-16 pb-16">
+      {/* Background image */}
       <Image
         src="/images/hero-bg.png"
         alt="Hero background"
@@ -22,95 +24,124 @@ export const HeroSectionDesktop = () => {
         priority
         className="object-cover object-center glitch-layer"
       />
-      <div className="absolute inset-0 bg-black/40 z-0" />
-      <div className="relative z-gradientAnimationSpeed flex h-full justify-end items-center px-16">
-        <div className="flex flex-col justify-center max-w-2xl gap-y-gradientAnimationSpeed text-right items-end pr-16 py-0">
-          <div className="space-y-5 mb-12 mt-0">
-            <h1 className="text-6xl font-extrabold text-primary-foreground leading-tight">
+      {/* Overlay noir pour améliorer lisibilité */}
+      <div className="absolute inset-0 bg-black/60 z-0" />
+
+      {/* Contenu en bas à droite */}
+      <div className="relative z-10 flex h-full justify-end items-end px-16 pb-24">
+        <div className="flex flex-col justify-end items-end text-right max-w-xl w-full gap-y-10">
+          {/* Titre et sous-titre */}
+          <div className="space-y-5">
+            <h1 className="text-6xl font-extrabold leading-tight text-white">
               Jean-Charles Barq
             </h1>
-            <h2 className="text-2xl font-medium text-primary-foreground/50 leading-tight">
-              Fullstack Developer <br /> React / React Native / Node.js —
-              Blockchain Ready
+            <h2 className="text-2xl font-medium text-white/70 leading-tight">
+              Product-minded Fullstack Developer — Design-friendly &
+              Startup-focused
             </h2>
           </div>
-          <div className="text-2xl leading-relaxed text-primary-foreground/70 space-y-6 mb-12 px-0 text-right">
-            <p className="text-right">
+
+          {/* Texte principal */}
+          <div className="text-2xl leading-relaxed text-white/90 space-y-6">
+            <p>
               I help{" "}
               <GradientText
                 colors={gradientColors}
                 animationSpeed={gradientAnimationSpeed}
                 showBorder={false}
-                className="font-semibold inline"
+                className="font-semibold inline drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
               >
-                founders and businesses
+                startups and founders
               </GradientText>{" "}
-              design, build and launch{" "}
+              turn ideas into polished products — combining{" "}
               <GradientText
                 colors={gradientColors}
                 animationSpeed={gradientAnimationSpeed}
                 showBorder={false}
-                className="font-semibold inline"
+                className="font-semibold inline drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
               >
-                successful web & mobile products
-              </GradientText>
-              .
-            </p>
-            <p className="text-right">
-              From{" "}
-              <GradientText
-                colors={gradientColors}
-                animationSpeed={gradientAnimationSpeed}
-                showBorder={false}
-                className="font-semibold inline"
-              >
-                prototype
-              </GradientText>{" "}
-              to{" "}
-              <GradientText
-                colors={gradientColors}
-                animationSpeed={gradientAnimationSpeed}
-                showBorder={false}
-                className="font-semibold inline"
-              >
-                production
-              </GradientText>
-              , I partner with teams to deliver{" "}
-              <GradientText
-                colors={gradientColors}
-                animationSpeed={gradientAnimationSpeed}
-                showBorder={false}
-                className="font-semibold inline"
-              >
-                business-first
+                development
               </GradientText>
               ,{" "}
               <GradientText
                 colors={gradientColors}
                 animationSpeed={gradientAnimationSpeed}
                 showBorder={false}
-                className="font-semibold inline"
+                className="font-semibold inline drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
               >
-                user-focused
-              </GradientText>
-              , and{" "}
+                UX design
+              </GradientText>{" "}
+              and{" "}
               <GradientText
                 colors={gradientColors}
                 animationSpeed={gradientAnimationSpeed}
                 showBorder={false}
-                className="font-semibold inline"
+                className="font-semibold inline drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
               >
-                tech-driven
+                branding
+              </GradientText>
+              .
+            </p>
+            <p>
+              From{" "}
+              <GradientText
+                colors={gradientColors}
+                animationSpeed={gradientAnimationSpeed}
+                showBorder={false}
+                className="font-semibold inline drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
+              >
+                early-stage concepts
+              </GradientText>{" "}
+              to{" "}
+              <GradientText
+                colors={gradientColors}
+                animationSpeed={gradientAnimationSpeed}
+                showBorder={false}
+                className="font-semibold inline drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
+              >
+                production-ready apps
+              </GradientText>
+              , I support teams with{" "}
+              <GradientText
+                colors={gradientColors}
+                animationSpeed={gradientAnimationSpeed}
+                showBorder={false}
+                className="font-semibold inline drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
+              >
+                user-first
+              </GradientText>{" "}
+              and{" "}
+              <GradientText
+                colors={gradientColors}
+                animationSpeed={gradientAnimationSpeed}
+                showBorder={false}
+                className="font-semibold inline drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
+              >
+                business-aware
               </GradientText>{" "}
               solutions.
             </p>
           </div>
-          <div className="flex flex-row gap-4 mt-12 w-auto">
-            <Button size="lg" className="gap-2">
-              View My Work <ArrowRight className="h-4 w-4" />
-            </Button>
-            <Button variant="outline" size="lg">
-              Contact Me
+
+          <div className="flex flex-row items-center justify-end gap-4 mt-4">
+            {/* CTA 1 - Discover My Work → style link button avec affordance */}
+            <Link
+              href="/portfolio"
+              className="text-white/70 hover:text-white text-lg font-medium px-4 py-2 transition-colors hover:underline flex items-center gap-1"
+            >
+              Discover My Work
+            </Link>
+
+            {/* CTA 2 - Hire Me → CTA primaire sans flèche */}
+            <Button asChild variant="outline" size="lg">
+              <Link
+                href="https://malt.fr/profile/jeancharlesbarq"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center"
+              >
+                Hire Me
+              </Link>
             </Button>
           </div>
         </div>
