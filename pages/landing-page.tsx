@@ -11,7 +11,13 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Briefcase, User, FileText } from "lucide-react";
 
+import { useIsMobile } from "@/hooks/use-mobile";
+import { HeroSectionDesktop } from "@/components/hero-section/hero-section-desktop";
+import { HeroSectionMobile } from "@/components/hero-section/hero-section-mobile";
+
 const LandingPage: React.FC = () => {
+  const isMobile = useIsMobile();
+
   const skills = [
     "React",
     "React Native",
@@ -71,25 +77,7 @@ const LandingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="py-20 px-4 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl font-bold mb-6 text-foreground">
-            Fullstack Developer
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            5+ years of experience building modern web and mobile applications.
-            Specializing in React, React Native, and Node.js development.
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Button size="lg" className="gap-2">
-              View My Work <ArrowRight className="h-4 w-4" />
-            </Button>
-            <Button variant="outline" size="lg">
-              Contact Me
-            </Button>
-          </div>
-        </div>
-      </section>
+      {isMobile ? <HeroSectionMobile /> : <HeroSectionDesktop />}
 
       {/* Services Section */}
       <section className="py-16 px-4 bg-muted/30">
