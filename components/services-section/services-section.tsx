@@ -1,30 +1,34 @@
-import { Briefcase, FileText, User } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "../ui/card";
+import { Briefcase, Smartphone, User, Palette } from "lucide-react";
+import { ServiceCard } from "../service-card/service-card";
 
 const services = [
   {
+    image: "/images/card-bg-1.png",
     icon: <User className="h-6 w-6" />,
-    title: "Frontend Development",
+    title: "Product-focused Frontend",
     description:
-      "Modern, responsive web applications using React, TypeScript, and cutting-edge technologies.",
+      "Elegant, responsive UIs with React & TypeScript — crafted to engage users and enhance your product experience.",
   },
   {
+    image: "/images/card-bg-2.png",
     icon: <Briefcase className="h-6 w-6" />,
-    title: "Full-Stack Solutions",
+    title: "End-to-End Product Development",
     description:
-      "End-to-end development from frontend to backend, APIs, and database design.",
+      "From UX wireframes to production-ready apps — fullstack development tailored to your product vision. Includes blockchain integrations (certified by Alyra).",
   },
   {
-    icon: <FileText className="h-6 w-6" />,
-    title: "Mobile Development",
+    image: "/images/card-bg-3.png",
+    icon: <Smartphone className="h-6 w-6" />,
+    title: "Mobile App Development",
     description:
-      "Cross-platform mobile applications using React Native for iOS and Android.",
+      "Native-like cross-platform apps with React Native — delivering seamless experiences on iOS and Android.",
+  },
+  {
+    image: "/images/card-bg-4.png",
+    icon: <Palette className="h-6 w-6" />,
+    title: "UX & Branding Support",
+    description:
+      "Shape your product’s identity — branding, design systems and UX/UI guidance for a cohesive and memorable experience.",
   },
 ];
 
@@ -33,19 +37,15 @@ export const ServicesSection = () => {
     <section className="py-16 px-4 bg-muted/30">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12">Services</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="text-center">
-              <CardHeader>
-                <div className="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit">
-                  {service.icon}
-                </div>
-                <CardTitle>{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>{service.description}</CardDescription>
-              </CardContent>
-            </Card>
+            <ServiceCard
+              key={index}
+              image={service.image}
+              icon={service.icon}
+              title={service.title}
+              description={service.description}
+            />
           ))}
         </div>
       </div>

@@ -122,7 +122,6 @@ export const HeroSectionMobile = () => {
 
         {/* Bottom : CTA */}
         <div className="flex flex-col items-center gap-3 w-full px-2 pt-6 pb-6">
-          {/* Discover My Work → lien simple, centré */}
           <Link
             href="/portfolio"
             className="text-white/70 hover:text-white text-base font-medium transition-colors hover:underline"
@@ -130,7 +129,6 @@ export const HeroSectionMobile = () => {
             Discover My Work
           </Link>
 
-          {/* Hire Me → bouton CTA principal */}
           <Button asChild variant="outline" size="lg" className="w-full">
             <a
               href="https://malt.fr/profile/jeancharlesbarq"
