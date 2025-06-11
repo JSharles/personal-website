@@ -1,0 +1,61 @@
+"use client";
+
+import { Mail, Linkedin, Calendar } from "lucide-react";
+import Image from "next/image";
+
+export const Header = () => {
+  return (
+    <header className="fixed top-0 left-0 w-full h-16 px-6 flex items-center justify-between bg-transparent z-50">
+      {/* Left icons */}
+      <div className="flex items-center gap-4">
+        <a
+          href="https://www.linkedin.com/in/jeancharlesbarq/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Linkedin className="w-5 h-5 text-primary-foreground hover:text-primary" />
+        </a>
+        <a
+          href="https://www.malt.fr/profile/jeancharlesbarq"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/icons/malt-logo.svg"
+            alt="Malt"
+            width={20}
+            height={20}
+            className="hover:opacity-80"
+          />
+        </a>
+        <a
+          href="mailto:jeancharlesbarq@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Mail className="w-5 h-5 text-primary-foreground hover:text-primary" />
+        </a>
+        <a
+          href="https://wa.me/+33767878027"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/icons/whatsapp-logo.svg"
+            alt="WhatsApp"
+            width={20}
+            height={20}
+            className="hover:opacity-80"
+          />
+        </a>
+        <a
+          href="https://calendly.com/jeancharlesbarq/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Calendar className="w-5 h-5 text-primary-foreground hover:text-primary" />
+        </a>
+      </div>
+    </header>
+  );
+};

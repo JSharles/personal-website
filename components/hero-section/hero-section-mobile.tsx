@@ -1,8 +1,17 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import GradientText from "../GradientText/GradientText";
 
 export const HeroSectionMobile = () => {
+  const gradientColors = [
+    "#56566d",
+    "rgb(127, 131, 150)",
+    "#a4b3bf",
+    "#ffffff",
+  ];
+  const gradientAnimationSpeed = 3;
+
   return (
     <section className="h-screen w-full relative flex flex-col overflow-hidden px-4 pt-8 pb-4">
       {/* Background image */}
@@ -11,11 +20,7 @@ export const HeroSectionMobile = () => {
         alt="Hero background"
         fill
         priority
-        className="
-          object-cover
-          object-center
-          glitch-layer
-        "
+        className="object-cover object-center glitch-layer"
       />
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 z-0" />
@@ -37,36 +42,71 @@ export const HeroSectionMobile = () => {
         <div className="flex-1 flex flex-col justify-center text-xl leading-relaxed text-primary-foreground/70 space-y-8 max-w-md px-2">
           <p>
             I help{" "}
-            <span className="font-semibold text-primary-foreground">
+            <GradientText
+              colors={gradientColors}
+              animationSpeed={gradientAnimationSpeed}
+              showBorder={false}
+              className="font-semibold inline"
+            >
               founders and businesses
-            </span>{" "}
+            </GradientText>{" "}
             design, build and launch{" "}
-            <span className="font-semibold text-primary-foreground">
+            <GradientText
+              colors={gradientColors}
+              animationSpeed={gradientAnimationSpeed}
+              showBorder={false}
+              className="font-semibold inline"
+            >
               successful web & mobile products
-            </span>
+            </GradientText>
             .
           </p>
           <p>
             From{" "}
-            <span className="font-semibold text-primary-foreground">
+            <GradientText
+              colors={gradientColors}
+              animationSpeed={gradientAnimationSpeed}
+              showBorder={false}
+              className="font-semibold inline"
+            >
               prototype
-            </span>{" "}
+            </GradientText>{" "}
             to{" "}
-            <span className="font-semibold text-primary-foreground">
+            <GradientText
+              colors={gradientColors}
+              animationSpeed={gradientAnimationSpeed}
+              showBorder={false}
+              className="font-semibold inline"
+            >
               production
-            </span>
+            </GradientText>
             , I partner with teams to deliver{" "}
-            <span className="font-semibold text-primary-foreground">
+            <GradientText
+              colors={gradientColors}
+              animationSpeed={gradientAnimationSpeed}
+              showBorder={false}
+              className="font-semibold inline"
+            >
               business-first
-            </span>
+            </GradientText>
             ,{" "}
-            <span className="font-semibold text-primary-foreground">
+            <GradientText
+              colors={gradientColors}
+              animationSpeed={gradientAnimationSpeed}
+              showBorder={false}
+              className="font-semibold inline"
+            >
               user-focused
-            </span>
+            </GradientText>
             , and{" "}
-            <span className="font-semibold text-primary-foreground">
+            <GradientText
+              colors={gradientColors}
+              animationSpeed={gradientAnimationSpeed}
+              showBorder={false}
+              className="font-semibold inline"
+            >
               tech-driven
-            </span>{" "}
+            </GradientText>{" "}
             solutions.
           </p>
         </div>
