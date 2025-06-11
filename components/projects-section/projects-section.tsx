@@ -12,6 +12,37 @@ import Link from "next/link";
 export const ProjectsSection = () => {
   const projects = [
     {
+      title: "Devox - Blockchain Course project",
+      description: "",
+      tech: ["React Native", "Redux Toolkit", "AWS", "Serverless", "MongoDB"],
+      status: "Completed",
+      link: "/portfolio/moodoow-sports-app", // page générique, plus pro que lier vers l'app store
+    },
+    {
+      title: "QB3 - Blockchain Course project",
+      description:
+        "White-label mobile application platform for sports clubs — powering apps like USM Sapiac, enhancing fan experience.",
+      tech: ["React Native", "Redux Toolkit", "AWS", "Serverless", "MongoDB"],
+      status: "Completed",
+      link: "/portfolio/moodoow-sports-app", // page générique, plus pro que lier vers l'app store
+    },
+    {
+      title: "L'Ame Du Tambour",
+      description:
+        "White-label mobile application platform for sports clubs — powering apps like USM Sapiac, enhancing fan experience.",
+      tech: ["React Native", "Redux Toolkit", "AWS", "Serverless", "MongoDB"],
+      status: "Completed",
+      link: "/portfolio/moodoow-sports-app", // page générique, plus pro que lier vers l'app store
+    },
+    {
+      title: "A-MATE SPORTS",
+      description:
+        "White-label mobile application platform for sports clubs — powering apps like USM Sapiac, enhancing fan experience.",
+      tech: ["React Native", "Redux Toolkit", "AWS", "Serverless", "MongoDB"],
+      status: "Completed",
+      link: "/portfolio/moodoow-sports-app", // page générique, plus pro que lier vers l'app store
+    },
+    {
       title: "Moodoow SAS — White-label Sports App",
       description:
         "White-label mobile application platform for sports clubs — powering apps like USM Sapiac, enhancing fan experience.",
