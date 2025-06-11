@@ -5,15 +5,14 @@ import Image from "next/image";
 
 export const Header = () => {
   return (
-    <header className="fixed top-0 left-0 w-full h-16 px-6 flex items-center justify-between bg-transparent z-50">
-      {/* Left icons */}
-      <div className="flex items-center gap-4">
+    <header className="fixed top-4 left-0 w-full h-16 px-6 flex items-center justify-between bg-transparent z-50">
+      <div className="flex items-center gap-10 border border-gray-600 py-3 px-6 bg-black/30 backdrop-blur-md rounded-full">
         <a
           href="https://www.linkedin.com/in/jeancharlesbarq/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Linkedin className="w-5 h-5 text-primary-foreground hover:text-primary" />
+          <Linkedin className="w-6 h-6 text-gray-100 opacity-70 hover:opacity-100 transition" />
         </a>
         <a
           href="https://www.malt.fr/profile/jeancharlesbarq"
@@ -23,9 +22,9 @@ export const Header = () => {
           <Image
             src="/icons/malt-logo.svg"
             alt="Malt"
-            width={20}
-            height={20}
-            className="hover:opacity-80"
+            width={24}
+            height={24}
+            className="opacity-70 hover:opacity-100 transition"
           />
         </a>
         <a
@@ -33,7 +32,7 @@ export const Header = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Mail className="w-5 h-5 text-primary-foreground hover:text-primary" />
+          <Mail className="w-6 h-6 text-gray-100 opacity-70 hover:opacity-100 transition" />
         </a>
         <a
           href="https://wa.me/+33767878027"
@@ -43,9 +42,9 @@ export const Header = () => {
           <Image
             src="/icons/whatsapp-logo.svg"
             alt="WhatsApp"
-            width={20}
-            height={20}
-            className="hover:opacity-80"
+            width={24}
+            height={24}
+            className="opacity-70 hover:opacity-100 transition"
           />
         </a>
         <a
@@ -53,7 +52,7 @@ export const Header = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Calendar className="w-5 h-5 text-primary-foreground hover:text-primary" />
+          <Calendar className="w-6 h-6 text-gray-100 opacity-70 hover:opacity-100 transition" />
         </a>
       </div>
     </header>
