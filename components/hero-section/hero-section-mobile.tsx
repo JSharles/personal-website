@@ -123,7 +123,7 @@ export const HeroSectionMobile = () => {
         {/* Bottom : CTA */}
         <div className="flex flex-col items-center gap-3 w-full px-2 pt-6 pb-6">
           <Link
-            href="/portfolio"
+            href="https://phrygian-turnover-e78.notion.site/Portfolio-210d5e95fa248082b558cf0eb080341f?source=copy_link"
             className="text-white/70 hover:text-white text-base font-medium transition-colors hover:underline"
           >
             Discover My Work

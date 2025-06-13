@@ -125,7 +125,7 @@ export const HeroSectionDesktop = () => {
           <div className="flex flex-row items-center justify-end gap-4 mt-4">
             {/* CTA 1 - Discover My Work → style link button avec affordance */}
             <Link
-              href="/portfolio"
+              href="https://phrygian-turnover-e78.notion.site/Portfolio-210d5e95fa248082b558cf0eb080341f?source=copy_link"
               className="text-white/70 hover:text-white text-lg font-medium px-4 py-2 transition-colors hover:underline flex items-center gap-1"
             >
               Discover My Work

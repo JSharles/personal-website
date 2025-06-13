@@ -114,7 +114,7 @@ export const ProjectsSection = () => {
         {/* View More button */}
         <div className="text-center">
           <Button asChild variant="outline" size="lg">
-            <Link href="https://phrygian-turnover-e78.notion.site/210d5e95fa2480789940ee20e3a2cdae?v=210d5e95fa2480398c88000c907b9ba4&source=copy_link">
+            <Link href="https://phrygian-turnover-e78.notion.site/Portfolio-210d5e95fa248082b558cf0eb080341f?source=copy_link">
               View More Projects
             </Link>
           </Button>
