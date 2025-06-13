@@ -28,6 +28,19 @@ export const Header = () => {
           />
         </a>
         <a
+          href="https://github.com/JSharles"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/icons/github-mark-white.svg"
+            alt="Malt"
+            width={24}
+            height={24}
+            className="opacity-70 hover:opacity-100 transition"
+          />
+        </a>
+        <a
           href="mailto:jeancharlesbarq@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
