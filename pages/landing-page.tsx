@@ -4,11 +4,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 import { useIsMobile } from "@/hooks/use-mobile";
-import { HeroSectionDesktop } from "@/components/hero-section/hero-section-desktop";
+
 import { HeroSectionMobile } from "@/components/hero-section/hero-section-mobile";
 import { ServicesSection } from "@/components/services-section/services-section";
 import { SkillsSection } from "@/components/skills-section/skills-section";
 import { ProjectsSection } from "@/components/projects-section/projects-section";
+import { HeroSectionDesktop } from "@/components/hero-section/hero-section-desktop";
 
 const LandingPage: React.FC = () => {
   const isMobile = useIsMobile();

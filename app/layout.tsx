@@ -3,6 +3,7 @@ import { Sora } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import { Header } from "@/components/header/header";
+import { BottomBar } from "@/components/bottom-bar/bottom-bar";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           {children}
+          <BottomBar />
         </Providers>
       </body>
     </html>
