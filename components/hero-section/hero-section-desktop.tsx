@@ -1,145 +1,154 @@
-import { Button } from "../ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "../ui/button";
 import GradientText from "../GradientText/GradientText";
 
 export const HeroSectionDesktop = () => {
   const gradientColors = [
-    "#ffffff", // blanc
-    "#f0e5e2", // rose pâle
-    "#222222", // gris très foncé (presque noir)
-    "#f0e5e2", // rose pâle
-    "#ffffff", // blanc
+    "#ffffff",
+    "#f0e5e2",
+    "#222222",
+    "#f0e5e2",
+    "#ffffff",
   ];
 
-  const gradientAnimationSpeed = 6;
+  const gradientAnimationSpeed = 10;
 
   return (
-    <section className="h-screen w-full relative overflow-hidden px-16 pb-16">
-      {/* Background image */}
-      <Image
-        src="/images/hero-bg-desktop.png"
-        alt="Hero background"
-        fill
-        priority
-        className="object-cover object-center"
-      />
+    <section
+      className="w-full min-h-screen text-foreground bg-no-repeat bg-center bg-[length:40%] px-8 py-12 lg:px-16 lg:py-16 relative grid"
+      style={{
+        backgroundImage: "url('/images/face.png')",
+        gridTemplateColumns:
+          "minmax(320px, 1fr) minmax(320px, 1fr) minmax(320px, 1fr)",
+      }}
+    >
+      {/* Colonne 1 : Logo + Nom + Titre (centré verticalement) */}
+      <div className="flex flex-col justify-center items-start max-w-md z-10">
+        <div className="w-28 h-28 relative right-3.5">
+          <Image
+            src="/images/compact-dark.png"
+            alt="Logo"
+            fill
+            className="object-contain"
+          />
+        </div>
 
-      {/* Nom + rôle — en haut à gauche */}
-      <div className="absolute top-16 left-16 z-10 max-w-xl text-left">
-        <h1 className="text-6xl font-extrabold leading-tight text-[#f0e5e2]">
-          Jean-Charles Barq
-        </h1>
-        <h2 className="text-2xl font-medium text-[#f0e5e2]/70 leading-tight mt-4">
+        <div className="font-extrabold space-y-1">
+          <div className="text-5xl leading-[1.1] text-left">Jean–Charles</div>
+          <div className="text-5xl leading-[1.1] text-left">Barq</div>
+        </div>
+
+        <h2 className="text-xl font-medium text-foreground/70 mt-12 leading-snug">
           Product-minded Fullstack Developer — Design-friendly & Startup-focused
         </h2>
       </div>
 
-      {/* Texte descriptif + CTA — en bas à droite */}
-      <div className="relative z-10 flex h-full justify-end items-end px-16 pb-24">
-        <div className="flex flex-col justify-end items-end text-right max-w-xl w-full gap-y-10">
-          <div className="text-2xl leading-relaxed text-[#f0e5e2]/90 space-y-6">
-            <p>
-              I help{" "}
-              <GradientText
-                colors={gradientColors}
-                animationSpeed={gradientAnimationSpeed}
-                showBorder={false}
-                className="font-semibold inline"
-              >
-                startups and founders
-              </GradientText>{" "}
-              turn ideas into polished products — combining{" "}
-              <GradientText
-                colors={gradientColors}
-                animationSpeed={gradientAnimationSpeed}
-                showBorder={false}
-                className="font-semibold inline"
-              >
-                development
-              </GradientText>
-              ,{" "}
-              <GradientText
-                colors={gradientColors}
-                animationSpeed={gradientAnimationSpeed}
-                showBorder={false}
-                className="font-semibold inline"
-              >
-                UX design
-              </GradientText>{" "}
-              and{" "}
-              <GradientText
-                colors={gradientColors}
-                animationSpeed={gradientAnimationSpeed}
-                showBorder={false}
-                className="font-semibold inline"
-              >
-                branding
-              </GradientText>
-              .
-            </p>
-            <p>
-              From{" "}
-              <GradientText
-                colors={gradientColors}
-                animationSpeed={gradientAnimationSpeed}
-                showBorder={false}
-                className="font-semibold inline"
-              >
-                early-stage concepts
-              </GradientText>{" "}
-              to{" "}
-              <GradientText
-                colors={gradientColors}
-                animationSpeed={gradientAnimationSpeed}
-                showBorder={false}
-                className="font-semibold inline"
-              >
-                production-ready apps
-              </GradientText>
-              , I support teams with{" "}
-              <GradientText
-                colors={gradientColors}
-                animationSpeed={gradientAnimationSpeed}
-                showBorder={false}
-                className="font-semibold inline"
-              >
-                user-first
-              </GradientText>{" "}
-              and{" "}
-              <GradientText
-                colors={gradientColors}
-                animationSpeed={gradientAnimationSpeed}
-                showBorder={false}
-                className="font-semibold inline"
-              >
-                business-aware
-              </GradientText>{" "}
-              solutions.
-            </p>
-          </div>
+      {/* Colonne 2 : vide (image de fond) */}
+      <div />
 
-          {/* CTA */}
-          <div className="flex flex-row items-center justify-end gap-4 mt-4">
-            <Link
-              href="https://phrygian-turnover-e78.notion.site/Portfolio-210d5e95fa248082b558cf0eb080341f?source=copy_link"
-              className="text-[#f0e5e2]/70 hover:text-[#f0e5e2] text-lg font-medium px-4 py-2 transition-colors hover:underline flex items-center gap-1"
-              target="_blank"
+      {/* Colonne 3 : Texte descriptif + CTA */}
+      <div className="flex flex-col justify-center items-end text-right max-w-md w-full gap-y-10 z-10">
+        <div className="text-lg md:text-xl leading-relaxed text-foreground/90 space-y-6">
+          <p>
+            I help{" "}
+            <GradientText
+              colors={gradientColors}
+              animationSpeed={gradientAnimationSpeed}
+              showBorder={false}
+              className="font-semibold inline"
             >
-              Discover My Work
-            </Link>
+              startups and founders
+            </GradientText>{" "}
+            turn ideas into polished products — combining{" "}
+            <GradientText
+              colors={gradientColors}
+              animationSpeed={gradientAnimationSpeed}
+              showBorder={false}
+              className="font-semibold inline"
+            >
+              development
+            </GradientText>
+            ,{" "}
+            <GradientText
+              colors={gradientColors}
+              animationSpeed={gradientAnimationSpeed}
+              showBorder={false}
+              className="font-semibold inline"
+            >
+              UX design
+            </GradientText>{" "}
+            and{" "}
+            <GradientText
+              colors={gradientColors}
+              animationSpeed={gradientAnimationSpeed}
+              showBorder={false}
+              className="font-semibold inline"
+            >
+              branding
+            </GradientText>
+            .
+          </p>
+          <p>
+            From{" "}
+            <GradientText
+              colors={gradientColors}
+              animationSpeed={gradientAnimationSpeed}
+              showBorder={false}
+              className="font-semibold inline"
+            >
+              early-stage concepts
+            </GradientText>{" "}
+            to{" "}
+            <GradientText
+              colors={gradientColors}
+              animationSpeed={gradientAnimationSpeed}
+              showBorder={false}
+              className="font-semibold inline"
+            >
+              production-ready apps
+            </GradientText>
+            , I support teams with{" "}
+            <GradientText
+              colors={gradientColors}
+              animationSpeed={gradientAnimationSpeed}
+              showBorder={false}
+              className="font-semibold inline"
+            >
+              user-first
+            </GradientText>{" "}
+            and{" "}
+            <GradientText
+              colors={gradientColors}
+              animationSpeed={gradientAnimationSpeed}
+              showBorder={false}
+              className="font-semibold inline"
+            >
+              business-aware
+            </GradientText>{" "}
+            solutions.
+          </p>
+        </div>
 
-            <Button asChild variant="outline" size="lg">
-              <Link
-                href="https://malt.fr/profile/jeancharlesbarq"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center"
-              >
-                Hire Me
-              </Link>
-            </Button>
-          </div>
+        <div className="flex flex-row items-center justify-end gap-4 mt-4">
+          <Link
+            href="https://phrygian-turnover-e78.notion.site/Portfolio-210d5e95fa248082b558cf0eb080341f?source=copy_link"
+            className="text-foreground/70 hover:text-foreground text-lg font-medium px-4 py-2 transition-colors hover:underline flex items-center gap-1"
+            target="_blank"
+          >
+            Discover My Work
+          </Link>
+
+          <Button asChild variant="outline" size="lg">
+            <Link
+              href="https://malt.fr/profile/jeancharlesbarq"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center"
+            >
+              Hire Me
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

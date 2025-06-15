@@ -11,33 +11,41 @@ export const HeroSectionMobile = () => {
     "#f0e5e2",
     "#ffffff",
   ];
-  const gradientAnimationSpeed = 6;
+  const gradientAnimationSpeed = 10;
 
   return (
-    <section className="relative w-full min-h-screen bg-black text-white flex flex-col justify-start px-4 ">
-      <div className="flex flex-col items-center">
-        <div className="w-80 h-80 relative">
+    <section className="relative w-full min-h-screen bg-background text-foreground flex flex-col items-center px-4 py-12">
+      <div className="flex flex-row items-center justify-center gap-6 mb-8">
+        <div className="w-32 h-32 relative">
           <Image
-            src="/images/hero-image-mobile.png"
-            alt="Hero Graphic"
+            src="/images/compact-dark.png"
+            alt="Logo"
+            fill
+            className="object-contain"
+          />
+        </div>
+
+        <div className="w-52 h-52 relative">
+          <Image
+            src="/images/face.png"
+            alt="Portrait"
             fill
             priority
             className="object-contain object-center"
           />
         </div>
-        <div className="text-center px-12 pb-4">
-          <h1 className="text-3xl font-extrabold text-[#f0e5e2]">
-            Jean-Charles Barq
-          </h1>
-          <p className="text-sm text-[#f0e5e2]/70 mt-1">
-            Product-minded Fullstack Developer — Design-friendly &
-            Startup-focused
-          </p>
-        </div>
       </div>
 
-      {/* Main Text Block */}
-      <div className="mt-6 text-sm leading-relaxed text-[#f0e5e2] space-y-8 text-center px-12 mb-6">
+      <div className="text-center px-6 mb-16">
+        <h1 className="text-3xl font-extrabold">Jean-Charles Barq</h1>
+
+        <p className="text-sm text-foreground/70 px-16">
+          Product-minded Fullstack Developer — Design-friendly & Startup-focused
+        </p>
+      </div>
+
+      {/* Texte principal */}
+      <div className="text-sm leading-relaxed text-foreground space-y-6 text-center px-16 mb-12">
         <p>
           I help{" "}
           <GradientText
@@ -102,28 +110,25 @@ export const HeroSectionMobile = () => {
         </p>
       </div>
 
-      {/* CTA Block */}
-      <div className="mt-8 flex flex-col gap-6 w-full items-center">
+      {/* CTA */}
+      <div className="flex flex-row flex-wrap justify-center items-center gap-4 w-full px-4">
         <Link
           href="https://phrygian-turnover-e78.notion.site/Portfolio-210d5e95fa248082b558cf0eb080341f?source=copy_link"
-          className="text-[#f0e5e2]/80 hover:text-[#f0e5e2] text-sm font-medium transition-colors underline underline-offset-4"
+          className="text-foreground/70 hover:text-foreground text-sm font-medium px-4 py-2 transition-colors hover:underline flex items-center gap-1"
+          target="_blank"
         >
           Discover My Work
         </Link>
-        <Button
-          asChild
-          variant="outline"
-          size="lg"
-          className="w-full max-w-xs bg-white text-black"
-        >
-          <a
+
+        <Button asChild variant="outline" size="lg" className="w-auto">
+          <Link
             href="https://malt.fr/profile/jeancharlesbarq"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center"
           >
             Hire Me
-          </a>
+          </Link>
         </Button>
       </div>
     </section>
