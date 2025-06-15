@@ -12,31 +12,46 @@ import Link from "next/link";
 export const ProjectsSection = () => {
   const projects = [
     {
-      title: "QB3 - Blockchain Course project",
+      title: "QB3 - Blockchain Course project ",
       description:
         "White-label mobile application platform for sports clubs — powering apps like USM Sapiac, enhancing fan experience.",
-      tech: ["React Native", "Redux Toolkit", "AWS", "Serverless", "MongoDB"],
+      tech: ["Next.js", "Solidity", "Hardhat", "Wagmi", "RainbowKit"],
+      status: "Completed",
+    },
+    {
+      title: "Stockoss - Logistics SaaS Platform",
+      description:
+        "SaaS platform for logistics and storage management. Frontend & Fullstack contributions.",
+      tech: [
+        "React",
+        "Next.js",
+        "React Native",
+        "TypeScript",
+        "NestJS",
+        "PostgreSQL",
+      ],
       status: "Completed",
     },
     {
       title: "Moodoow SAS — White-label Sports App",
       description:
         "White-label mobile application platform for sports clubs — powering apps like USM Sapiac, enhancing fan experience.",
-      tech: ["React Native", "Redux Toolkit", "AWS", "Serverless", "MongoDB"],
+      tech: [
+        "React Native",
+        "React",
+        "Redux Toolkit",
+        "AWS",
+        "Serverless",
+        "MongoDB",
+      ],
       status: "Completed",
     },
-    {
-      title: "Internal Logistics SaaS Platform (Stockoss)",
-      description:
-        "SaaS platform for logistics and storage management. Frontend & Fullstack contributions.",
-      tech: ["React", "TypeScript", "Node.js", "PostgreSQL"],
-      status: "Completed",
-    },
+
     {
       title: "DGAC Internal Platform",
       description:
         "Internal application for aviation regulation data management. Developed in Golang and JavaScript.",
-      tech: ["Golang", "JavaScript", "MongoDB"],
+      tech: ["Golang", "React", "JavaScript", "MongoDB"],
       status: "Completed",
     },
   ];
