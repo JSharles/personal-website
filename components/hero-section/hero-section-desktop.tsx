@@ -23,9 +23,8 @@ export const HeroSectionDesktop = () => {
           "minmax(320px, 1fr) minmax(320px, 1fr) minmax(320px, 1fr)",
       }}
     >
-      {/* Colonne 1 : Logo + Nom + Titre (centré verticalement) */}
       <div className="flex flex-col justify-center items-start max-w-md z-10">
-        <div className="w-28 h-28 relative right-3.5">
+        <div className="w-80 h-80 mb-10 relative right-10">
           <Image
             src="/images/compact-dark.png"
             alt="Logo"
@@ -34,22 +33,24 @@ export const HeroSectionDesktop = () => {
           />
         </div>
 
-        <div className="font-extrabold space-y-1">
-          <div className="text-5xl leading-[1.1] text-left">Jean–Charles</div>
-          <div className="text-5xl leading-[1.1] text-left">Barq</div>
+        <div className="font-extrabold space-y-0.5">
+          <div className="text-5xl xl:text-6xl leading-[1.1] text-left">
+            Jean–Charles
+          </div>
+          <div className="text-5xl xl:text-6xl leading-[1.1] text-left">
+            Barq
+          </div>
         </div>
 
-        <h2 className="text-xl font-medium text-foreground/70 mt-12 leading-snug">
+        <h2 className="text-xl xl:text-2xl font-medium text-foreground/70 mt-4 leading-snug">
           Product-minded Fullstack Developer — Design-friendly & Startup-focused
         </h2>
       </div>
 
-      {/* Colonne 2 : vide (image de fond) */}
       <div />
 
-      {/* Colonne 3 : Texte descriptif + CTA */}
       <div className="flex flex-col justify-center items-end text-right max-w-md w-full gap-y-10 z-10">
-        <div className="text-lg md:text-xl leading-relaxed text-foreground/90 space-y-6">
+        <div className="text-lg xl:text-xl leading-relaxed text-foreground/90 space-y-6">
           <p>
             I help{" "}
             <GradientText
@@ -133,7 +134,7 @@ export const HeroSectionDesktop = () => {
         <div className="flex flex-row items-center justify-end gap-4 mt-4">
           <Link
             href="https://phrygian-turnover-e78.notion.site/Portfolio-210d5e95fa248082b558cf0eb080341f?source=copy_link"
-            className="text-foreground/70 hover:text-foreground text-lg font-medium px-4 py-2 transition-colors hover:underline flex items-center gap-1"
+            className="text-foreground/70 hover:text-foreground text-lg xl:text-xl font-medium px-4 py-2 transition-colors hover:underline flex items-center gap-1"
             target="_blank"
           >
             Discover My Work
