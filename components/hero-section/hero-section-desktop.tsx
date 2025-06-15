@@ -24,7 +24,7 @@ export const HeroSectionDesktop = () => {
       }}
     >
       <div className="flex flex-col justify-center items-start max-w-md z-10">
-        <div className="w-80 h-80 mb-10 relative right-10">
+        <div className="w-92 h-92 mb-10 relative right-14">
           <Image
             src="/images/compact-dark.png"
             alt="Logo"

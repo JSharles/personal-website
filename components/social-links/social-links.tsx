@@ -9,8 +9,18 @@ export const SocialLinks = () => {
   };
 
   return (
-    <div className="w-full flex justify-center overflow-hidden px-4">
-      <div className="flex items-center gap-6 border border-foreground/40 py-3 sm:px-6 px-4 bg-black/30 backdrop-blur-md rounded-full max-w-full">
+    <div className="w-full px-4 overflow-x-auto">
+      <div
+        className="
+          flex items-center gap-6
+          border border-foreground/40
+          py-3 sm:px-6 px-4
+          bg-black/30 backdrop-blur-md
+          rounded-full
+          whitespace-nowrap
+          min-w-fit
+        "
+      >
         <a
           href="https://www.linkedin.com/in/jeancharlesbarq/"
           target="_blank"
