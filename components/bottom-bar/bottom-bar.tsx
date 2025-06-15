@@ -4,8 +4,10 @@ import { SocialLinks } from "../social-links/social-links";
 
 export const BottomBar = () => {
   return (
-    <div className="fixed bottom-4 left-0 w-full  h-16 px-6 flex items-center justify-center bg-transparent z-50 md:hidden">
-      <SocialLinks />
+    <div className="fixed bottom-4 px-4 flex justify-center z-50 md:hidden pointer-events-none">
+      <div className="pointer-events-auto">
+        <SocialLinks />
+      </div>
     </div>
   );
 };
