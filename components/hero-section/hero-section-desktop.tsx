@@ -42,9 +42,12 @@ export const HeroSectionDesktop = () => {
           </div>
         </div>
 
-        <h2 className="text-xl xl:text-2xl font-medium text-foreground/70 mt-4 leading-snug">
-          Product-minded Fullstack Developer — Design-friendly & Startup-focused
+        <h2 className="text-3xl xl:text-3xl font-medium text-foreground mt-4 leading-snug">
+          Fullstack Developer
         </h2>
+        <h3 className="text-xl xl:text-xl font-medium text-foreground/70 mt-4 leading-snug">
+          — Product-minded, Design-friendly & Startup-focused
+        </h3>
       </div>
 
       <div />

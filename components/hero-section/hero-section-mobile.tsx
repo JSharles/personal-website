@@ -43,7 +43,7 @@ export const HeroSectionMobile = () => {
           Fullstack Developer
         </p>
         <p className="text-xl text-foreground/70 px-6">
-          Product-minded, Design-friendly & Startup-focused
+          - Product-minded, Design-friendly & Startup-focused
         </p>
       </div>
 
