@@ -36,16 +36,17 @@ export const HeroSectionMobile = () => {
         </div>
       </div>
 
-      <div className="text-center px-6 mb-16">
+      <div className="text-center px-6 mb-12">
         <h1 className="text-3xl font-extrabold">Jean-Charles Barq</h1>
 
-        <p className="text-sm text-foreground/70 px-16">
-          Product-minded Fullstack Developer — Design-friendly & Startup-focused
+        <p className="text-xl text-foreground px-8 mb-2">Fullstack Developer</p>
+        <p className="text-sm text-foreground/70 px-6">
+          Product-minded, Design-friendly & Startup-focused
         </p>
       </div>
 
       {/* Texte principal */}
-      <div className="text-sm leading-relaxed text-foreground space-y-6 text-center px-16 mb-12">
+      <div className="text-sm leading-relaxed text-foreground space-y-6 text-center px-8 mb-12">
         <p>
           I help{" "}
           <GradientText
