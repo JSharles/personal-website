@@ -37,10 +37,12 @@ export const HeroSectionMobile = () => {
       </div>
 
       <div className="text-center px-6 mb-12">
-        <h1 className="text-3xl font-extrabold">Jean-Charles Barq</h1>
+        <h1 className="text-4xl font-extrabold">Jean-Charles Barq</h1>
 
-        <p className="text-xl text-foreground px-8 mb-2">Fullstack Developer</p>
-        <p className="text-sm text-foreground/70 px-6">
+        <p className="text-2xl text-foreground px-8 mb-2">
+          Fullstack Developer
+        </p>
+        <p className="text-xl text-foreground/70 px-6">
           Product-minded, Design-friendly & Startup-focused
         </p>
       </div>

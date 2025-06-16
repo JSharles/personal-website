@@ -10,6 +10,7 @@ import { ServicesSection } from "@/components/services-section/services-section"
 import { SkillsSection } from "@/components/skills-section/skills-section";
 import { ProjectsSection } from "@/components/projects-section/projects-section";
 import { HeroSectionDesktop } from "@/components/hero-section/hero-section-desktop";
+import Link from "next/link";
 
 const LandingPage: React.FC = () => {
   const isMobile = useIsMobile();
@@ -26,8 +27,14 @@ const LandingPage: React.FC = () => {
           <p className="text-xl text-muted-foreground mb-8">
             Let&apos;s discuss your project and bring your ideas to life.
           </p>
-          <Button size="lg" className="gap-2">
-            Get In Touch <ArrowRight className="h-4 w-4" />
+
+          <Button asChild variant="outline" size="lg">
+            <Link
+              href="https://www.malt.fr/profile/jeancharlesbarq"
+              target="_blank"
+            >
+              Get In Touch <ArrowRight className="h-4 w-4 ml-2" />
+            </Link>
           </Button>
         </div>
       </section>
