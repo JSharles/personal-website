@@ -8,7 +8,7 @@ export const SkillsSection = () => {
     "TypeScript",
     "JavaScript",
     "Next.js",
-    "Express.js",
+    "NestJS",
     "Solidity",
     "Hardhat",
     "MongoDB",
