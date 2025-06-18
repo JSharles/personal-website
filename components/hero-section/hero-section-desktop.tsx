@@ -48,7 +48,7 @@ export const HeroSectionDesktop = () => {
         <h3 className="text-xl xl:text-xl font-medium text-foreground/70 mt-4 leading-snug">
           — Product-minded, Design-friendly & Startup-focused
         </h3>
-        <div className="mt-8  w-full justify-center items-center flex">
+        <div className="mt-8 w-full justify-center items-center flex flex-row gap-4">
           <Link
             href="https://phrygian-turnover-e78.notion.site/Jean-Charles-Barq-216d5e95fa2480f8917bfac82a543be2"
             target="_blank"
@@ -56,6 +56,22 @@ export const HeroSectionDesktop = () => {
             className="text-foreground/50 hover:text-foreground text-sm underline"
           >
             See my resume
+          </Link>
+          <Link
+            href="https://phrygian-turnover-e78.notion.site/Jean-Charles-Barq-216d5e95fa2480139c2afdb1e9f03b2e"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground/50 hover:text-foreground text-sm underline"
+          >
+            Voir mon CV
+          </Link>
+          <Link
+            href="https://phrygian-turnover-e78.notion.site/Jean-Charles-Barq-216d5e95fa2480e681c0dfa32fc100b1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground/50 hover:text-foreground text-sm underline"
+          >
+            Ver mi currículum
           </Link>
         </div>
       </div>
