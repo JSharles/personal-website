@@ -134,6 +134,16 @@ export const HeroSectionMobile = () => {
           </Link>
         </Button>
       </div>
+      <div className="mt-8  w-full justify-center items-center flex">
+        <Link
+          href="https://phrygian-turnover-e78.notion.site/Jean-Charles-Barq-216d5e95fa2480f8917bfac82a543be2"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-foreground/50 hover:text-foreground text-sm underline"
+        >
+          See my resume
+        </Link>
+      </div>
     </section>
   );
 };

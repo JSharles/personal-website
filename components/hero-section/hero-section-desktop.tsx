@@ -48,8 +48,17 @@ export const HeroSectionDesktop = () => {
         <h3 className="text-xl xl:text-xl font-medium text-foreground/70 mt-4 leading-snug">
           — Product-minded, Design-friendly & Startup-focused
         </h3>
+        <div className="mt-8  w-full justify-center items-center flex">
+          <Link
+            href="https://phrygian-turnover-e78.notion.site/Jean-Charles-Barq-216d5e95fa2480f8917bfac82a543be2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground/50 hover:text-foreground text-sm underline"
+          >
+            See my resume
+          </Link>
+        </div>
       </div>
-
       <div />
 
       <div className="flex flex-col justify-center items-end text-right max-w-md w-full gap-y-10 z-10">
