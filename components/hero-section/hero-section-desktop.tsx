@@ -1,183 +1,89 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import GradientText from "../GradientText/GradientText";
 
 export const HeroSectionDesktop = () => {
-  const gradientColors = [
-    "#ffffff",
-    "#f0e5e2",
-    "#222222",
-    "#f0e5e2",
-    "#ffffff",
-  ];
-
-  const gradientAnimationSpeed = 10;
-
   return (
-    <section
-      className="w-full min-h-screen text-foreground bg-no-repeat bg-center bg-[length:40%] px-8 py-12 lg:px-16 lg:py-16 relative grid"
-      style={{
-        backgroundImage: "url('/images/face.png')",
-        gridTemplateColumns:
-          "minmax(320px, 1fr) minmax(320px, 1fr) minmax(320px, 1fr)",
-      }}
-    >
-      <div className="flex flex-col justify-center items-start max-w-md z-10">
-        <div className="w-92 h-92 mb-10 relative right-14">
-          <Image
-            src="/images/compact-dark.png"
-            alt="Logo"
-            fill
-            className="object-contain"
-          />
-        </div>
-
-        <div className="font-extrabold space-y-0.5">
-          <div className="text-5xl xl:text-6xl leading-[1.1] text-left">
-            Jean–Charles
-          </div>
-          <div className="text-5xl xl:text-6xl leading-[1.1] text-left">
-            Barq
-          </div>
-        </div>
-
-        <h2 className="text-3xl xl:text-3xl font-medium text-foreground mt-4 leading-snug">
-          Fullstack Developer
-        </h2>
-        <h3 className="text-xl xl:text-xl font-medium text-foreground/70 mt-4 leading-snug">
-          — Product-minded, Design-friendly & Startup-focused
-        </h3>
-        <div className="mt-8 w-full justify-center items-center flex flex-row gap-4">
-          <Link
-            href="https://phrygian-turnover-e78.notion.site/Jean-Charles-Barq-216d5e95fa2480f8917bfac82a543be2"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-foreground/50 hover:text-foreground text-sm underline"
-          >
-            See my resume
-          </Link>
-          <Link
-            href="https://phrygian-turnover-e78.notion.site/Jean-Charles-Barq-216d5e95fa2480139c2afdb1e9f03b2e"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-foreground/50 hover:text-foreground text-sm underline"
-          >
-            Voir mon CV
-          </Link>
-          <Link
-            href="https://phrygian-turnover-e78.notion.site/Jean-Charles-Barq-216d5e95fa2480e681c0dfa32fc100b1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-foreground/50 hover:text-foreground text-sm underline"
-          >
-            Ver mi currículum
-          </Link>
-        </div>
+    <section className="w-full h-screen relative overflow-hidden bg-background">
+      {/* Photo + gradient superposé directement dessus */}
+      <div className="absolute left-0 top-0 w-[60%] h-full">
+        <Image
+          src="/images/avatar.png"
+          alt="Jean-Charles Barq"
+          fill
+          priority
+          className="object-cover object-[center_15%]"
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(to right, transparent 30%, #0D0D0F 90%)" }}
+        />
       </div>
-      <div />
 
-      <div className="flex flex-col justify-center items-end text-right max-w-md w-full gap-y-10 z-10">
-        <div className="text-lg xl:text-xl leading-relaxed text-foreground/90 space-y-6">
-          <p>
-            I help{" "}
-            <GradientText
-              colors={gradientColors}
-              animationSpeed={gradientAnimationSpeed}
-              showBorder={false}
-              className="font-semibold inline"
-            >
-              startups and founders
-            </GradientText>{" "}
-            turn ideas into polished products — combining{" "}
-            <GradientText
-              colors={gradientColors}
-              animationSpeed={gradientAnimationSpeed}
-              showBorder={false}
-              className="font-semibold inline"
-            >
-              development
-            </GradientText>
-            ,{" "}
-            <GradientText
-              colors={gradientColors}
-              animationSpeed={gradientAnimationSpeed}
-              showBorder={false}
-              className="font-semibold inline"
-            >
-              UX design
-            </GradientText>{" "}
-            and{" "}
-            <GradientText
-              colors={gradientColors}
-              animationSpeed={gradientAnimationSpeed}
-              showBorder={false}
-              className="font-semibold inline"
-            >
-              branding
-            </GradientText>
-            .
-          </p>
-          <p>
-            From{" "}
-            <GradientText
-              colors={gradientColors}
-              animationSpeed={gradientAnimationSpeed}
-              showBorder={false}
-              className="font-semibold inline"
-            >
-              early-stage concepts
-            </GradientText>{" "}
-            to{" "}
-            <GradientText
-              colors={gradientColors}
-              animationSpeed={gradientAnimationSpeed}
-              showBorder={false}
-              className="font-semibold inline"
-            >
-              production-ready apps
-            </GradientText>
-            , I support teams with{" "}
-            <GradientText
-              colors={gradientColors}
-              animationSpeed={gradientAnimationSpeed}
-              showBorder={false}
-              className="font-semibold inline"
-            >
-              user-first
-            </GradientText>{" "}
-            and{" "}
-            <GradientText
-              colors={gradientColors}
-              animationSpeed={gradientAnimationSpeed}
-              showBorder={false}
-              className="font-semibold inline"
-            >
-              business-aware
-            </GradientText>{" "}
-            solutions.
-          </p>
-        </div>
+      {/* Texte — zone noire droite, pleine largeur */}
+      <div className="absolute right-0 top-0 w-[40%] h-full flex flex-col justify-center gap-8 px-12 xl:px-16 z-10">
+        <p className="text-sm font-medium tracking-[0.25em] uppercase text-muted-foreground">
+          Freelance Product Engineer
+        </p>
 
-        <div className="flex flex-row items-center justify-end gap-4 mt-4">
+        <h1 className="text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight text-foreground">
+          Jean–Charles Barq
+        </h1>
+
+        <p className="text-2xl xl:text-3xl text-foreground/75 leading-snug">
+          I help B2B teams turn{" "}
+          <span className="text-foreground font-medium">complex business workflows</span>{" "}
+          into clear,{" "}
+          <span className="text-foreground font-medium">reliable and maintainable</span>{" "}
+          web products.
+        </p>
+
+        <p className="text-base text-muted-foreground tracking-wide">
+          React / TypeScript · Product-oriented frontend · Prototyping · Light backend
+        </p>
+
+        <div className="flex flex-row items-center gap-4">
+          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-sm px-8">
+            <Link href="https://malt.fr/profile/jeancharlesbarq" target="_blank" rel="noopener noreferrer">
+              Hire Me
+            </Link>
+          </Button>
           <Link
             href="https://phrygian-turnover-e78.notion.site/Portfolio-210d5e95fa248082b558cf0eb080341f?source=copy_link"
-            className="text-foreground/70 hover:text-foreground text-lg xl:text-xl font-medium px-4 py-2 transition-colors hover:underline flex items-center gap-1"
+            className="text-muted-foreground hover:text-foreground text-base font-medium transition-colors underline underline-offset-4"
             target="_blank"
           >
             Discover My Work
           </Link>
+        </div>
 
-          <Button asChild variant="outline" size="lg">
-            <Link
-              href="https://malt.fr/profile/jeancharlesbarq"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center"
-            >
-              Hire Me
-            </Link>
-          </Button>
+        <div className="flex flex-row gap-5">
+          <Link
+            href="https://phrygian-turnover-e78.notion.site/Jean-Charles-Barq-216d5e95fa2480f8917bfac82a543be2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground text-sm tracking-widest uppercase transition-colors"
+          >
+            Resume EN
+          </Link>
+          <span className="text-muted-foreground/30">·</span>
+          <Link
+            href="https://phrygian-turnover-e78.notion.site/Jean-Charles-Barq-216d5e95fa2480139c2afdb1e9f03b2e"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground text-sm tracking-widest uppercase transition-colors"
+          >
+            CV FR
+          </Link>
+          <span className="text-muted-foreground/30">·</span>
+          <Link
+            href="https://phrygian-turnover-e78.notion.site/Jean-Charles-Barq-216d5e95fa2480e681c0dfa32fc100b1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-foreground text-sm tracking-widest uppercase transition-colors"
+          >
+            CV ES
+          </Link>
         </div>
       </div>
     </section>

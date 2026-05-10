@@ -7,24 +7,28 @@ const services = [
     title: "Product-focused Frontend",
     description:
       "Elegant, responsive UIs with React & TypeScript — crafted to engage users and enhance your product experience.",
+    color: "#9333ea",
   },
   {
     icon: <Briefcase className="h-6 w-6" />,
     title: "End-to-End Product Development",
     description:
       "From UX wireframes to production-ready apps — fullstack development tailored to your product vision. Includes blockchain integrations (certified by Alyra).",
+    color: "#3b82f6",
   },
   {
     icon: <Smartphone className="h-6 w-6" />,
     title: "Mobile App Development",
     description:
       "Native-like cross-platform apps with React Native — delivering seamless experiences on iOS and Android.",
+    color: "#10b981",
   },
   {
     icon: <Palette className="h-6 w-6" />,
     title: "UX & Branding Support",
     description:
       "Shape your product’s identity — branding, design systems and UX/UI guidance for a cohesive and memorable experience.",
+    color: "#f97316",
   },
 ];
 
@@ -40,6 +44,7 @@ export const ServicesSection = () => {
               icon={service.icon}
               title={service.title}
               description={service.description}
+              color={service.color}
             />
           ))}
         </div>

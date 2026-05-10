@@ -9,9 +9,9 @@ export const SocialLinks = () => {
   };
 
   return (
-    <div className="flex items-center gap-5 border border-foreground/40 py-3 px-5 bg-black/40 backdrop-blur-md rounded-full overflow-x-auto max-w-full">
+    <div className="flex items-center gap-5 border border-white/10 py-3 px-5 bg-white/5 backdrop-blur-md rounded-full overflow-x-auto max-w-full">
       <a
-        href="https://www.linkedin.com/in/jeancharlesbarq/"
+        href="https://www.linkedin.com/in/jeancharlesbarq/?locale=en"
         target="_blank"
         rel="noopener noreferrer"
       >

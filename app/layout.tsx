@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
-import { Sora } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Providers } from "./providers";
 import { Header } from "@/components/header/header";
 import { BottomBar } from "@/components/bottom-bar/bottom-bar";
 
-const sora = Sora({
-  variable: "--font-sora",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Jean-Charles Barq - Fullstack Developer",
+  title: "Jean-Charles Barq - Freelance Product Engineer",
   description:
-    "Product-minded Fullstack Developer — Design-friendly & Startup-focused",
+    "Freelance Product Engineer — I help B2B teams turn complex business workflows into clear, reliable and maintainable web products.",
 };
 
 export default function RootLayout({
@@ -24,13 +25,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sora.variable} antialiased`}>
+      <body className={`${spaceGrotesk.variable} antialiased`}>
         <Providers>
           <Header />
           {children}
           <BottomBar />
         </Providers>
       </body>
+      <GoogleAnalytics gaId="G-8YPSNKYLHY" />
     </html>
   );
 }
