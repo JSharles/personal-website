@@ -9,13 +9,13 @@ export const SocialLinks = () => {
   };
 
   return (
-    <div className="flex items-center gap-5 border border-white/10 py-3 px-5 bg-white/5 backdrop-blur-md rounded-full overflow-x-auto max-w-full">
+    <div className="flex items-center gap-5 border border-white/10 py-3 px-5 bg-black/50 backdrop-blur-md rounded-full overflow-x-auto max-w-full">
       <a
         href="https://www.linkedin.com/in/jeancharlesbarq/?locale=en"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Linkedin className="w-6 h-6 text-foreground opacity-70 hover:opacity-100 transition" />
+        <Linkedin className="w-6 h-6 text-white opacity-70 hover:opacity-100 transition" />
       </a>
 
       <a
@@ -29,7 +29,7 @@ export const SocialLinks = () => {
           width={24}
           height={24}
           priority
-          className="opacity-70 hover:opacity-100 transition"
+          className="opacity-70 hover:opacity-100 transition brightness-0 invert"
         />
       </a>
 
@@ -44,7 +44,7 @@ export const SocialLinks = () => {
           width={24}
           height={24}
           priority
-          className="opacity-70 hover:opacity-100 transition"
+          className="opacity-70 hover:opacity-100 transition brightness-0 invert"
         />
       </a>
 
@@ -53,7 +53,7 @@ export const SocialLinks = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Mail className="w-6 h-6 text-foreground opacity-70 hover:opacity-100 transition" />
+        <Mail className="w-6 h-6 text-white opacity-70 hover:opacity-100 transition" />
       </a>
 
       <a
@@ -67,7 +67,7 @@ export const SocialLinks = () => {
           width={24}
           height={24}
           priority
-          className="opacity-70 hover:opacity-100 transition"
+          className="opacity-70 hover:opacity-100 transition brightness-0 invert"
         />
       </a>
 
@@ -76,7 +76,7 @@ export const SocialLinks = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Calendar className="w-6 h-6 text-foreground opacity-70 hover:opacity-100 transition" />
+        <Calendar className="w-6 h-6 text-white opacity-70 hover:opacity-100 transition" />
       </a>
 
       <button onClick={handleScrollToTop} aria-label="Scroll to top">

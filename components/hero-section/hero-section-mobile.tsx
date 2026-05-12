@@ -18,7 +18,6 @@ export const HeroSectionMobile = () => {
           priority
           className="object-cover object-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
       </div>
 
       <div className="flex flex-col items-center text-center px-6 -mt-8 z-10 pb-12">
@@ -30,11 +29,15 @@ export const HeroSectionMobile = () => {
           Jean–Charles Barq
         </h1>
 
-        <p className="text-base text-foreground/75 leading-relaxed mb-4 max-w-sm">
+        <p className="font-serif text-base text-foreground/75 leading-relaxed mb-4 max-w-sm">
           {t.rich("accroche", {
             h1: (chunks) => <span className="text-foreground font-medium">{chunks}</span>,
             h2: (chunks) => <span className="text-foreground font-medium">{chunks}</span>,
           })}
+        </p>
+
+        <p className="font-serif italic text-base text-muted-foreground leading-snug mb-4">
+          {t("opinion")}
         </p>
 
         <p className="text-xs text-muted-foreground tracking-wide mb-8">

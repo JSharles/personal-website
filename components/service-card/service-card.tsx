@@ -12,7 +12,7 @@ export const ServiceCard = ({ icon, title, description, color }: ServiceCardProp
     <div
       className="relative rounded-xl overflow-hidden text-foreground border h-80 transform transition-transform duration-300 hover:-translate-y-1"
       style={{
-        background: `linear-gradient(135deg, ${color}18 0%, #0D0D0F 65%)`,
+        background: `linear-gradient(135deg, ${color}18 0%, #F4F5F7 65%)`,
         borderColor: `${color}35`,
       }}
     >

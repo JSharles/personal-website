@@ -16,7 +16,7 @@ export const LocaleSwitcher = () => {
   };
 
   return (
-    <div className="flex items-center gap-1 border border-white/10 py-2 px-3 bg-white/5 backdrop-blur-md rounded-full">
+    <div className="flex items-center gap-1 border border-white/10 py-2 px-3 bg-black/50 backdrop-blur-md rounded-full">
       {routing.locales.map((l, i) => (
         <span key={l} className="flex items-center gap-1">
           {i > 0 && <span className="text-white/20 text-xs">·</span>}
@@ -24,8 +24,8 @@ export const LocaleSwitcher = () => {
             onClick={() => switchLocale(l)}
             className={`text-xs font-medium tracking-widest uppercase transition-colors ${
               locale === l
-                ? "text-foreground"
-                : "text-muted-foreground hover:text-foreground"
+                ? "text-white"
+                : "text-white/40 hover:text-white"
             }`}
           >
             {l}

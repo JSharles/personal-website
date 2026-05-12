@@ -93,7 +93,7 @@ export const ProjectsSection = () => {
   return (
     <section className="py-16 px-4">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-foreground mb-12">
+        <h2 className="text-3xl font-medium tracking-[0.25em] uppercase text-center text-foreground mb-12">
           Recent Projects
         </h2>
 
@@ -103,7 +103,7 @@ export const ProjectsSection = () => {
               <Card
                 className="border h-full text-foreground relative overflow-hidden transition-transform duration-300 hover:-translate-y-1"
                 style={{
-                  background: `linear-gradient(135deg, ${project.color}18 0%, #0D0D0F 65%)`,
+                  background: `linear-gradient(135deg, ${project.color}18 0%, #F4F5F7 65%)`,
                   borderColor: `${project.color}35`,
                 }}
               >

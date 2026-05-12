@@ -10,7 +10,7 @@ export const HeroSectionDesktop = () => {
 
   return (
     <section className="w-full h-screen relative overflow-hidden bg-background">
-      {/* Photo + gradient */}
+      {/* Photo */}
       <div className="absolute left-0 top-0 w-[60%] h-full">
         <Image
           src="/images/avatar.png"
@@ -18,10 +18,6 @@ export const HeroSectionDesktop = () => {
           fill
           priority
           className="object-cover object-[center_15%]"
-        />
-        <div
-          className="absolute inset-0"
-          style={{ background: "linear-gradient(to right, transparent 30%, #0D0D0F 90%)" }}
         />
       </div>
 
@@ -31,15 +27,19 @@ export const HeroSectionDesktop = () => {
           {t("label")}
         </p>
 
-        <h1 className="text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight text-foreground">
+        <h1 className="text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight text-foreground">
           Jean–Charles Barq
         </h1>
 
-        <p className="text-2xl xl:text-3xl text-foreground/75 leading-snug">
+        <p className="font-serif text-2xl xl:text-3xl text-foreground/75 leading-snug">
           {t.rich("accroche", {
             h1: (chunks) => <span className="text-foreground font-medium">{chunks}</span>,
             h2: (chunks) => <span className="text-foreground font-medium">{chunks}</span>,
           })}
+        </p>
+
+        <p className="font-serif italic text-lg text-muted-foreground leading-snug">
+          {t("opinion")}
         </p>
 
         <p className="text-base text-muted-foreground tracking-wide">
