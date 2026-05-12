@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "label": "Product Engineer Freelance",
+    "accroche": "J'aide les équipes B2B à transformer des <h1>processus métier complexes</h1> en produits web clairs, <h2>fiables et maintenables</h2>.",
+    "subphrase": "React / TypeScript · Frontend orienté produit · Prototypage · Backend léger",
+    "hire_me": "Me contacter",
+    "discover": "Voir mes projets",
+    "resume_en": "Resume EN",
+    "cv_fr": "CV FR",
+    "cv_es": "CV ES"
+  },
+  "services": {
+    "title": "Services",
+    "frontend_title": "Frontend orienté produit",
+    "frontend_desc": "Interfaces élégantes et responsives en React & TypeScript — conçues pour engager les utilisateurs et améliorer l'expérience produit.",
+    "e2e_title": "Développement produit de bout en bout",
+    "e2e_desc": "Des maquettes UX aux apps prêtes pour la production — développement fullstack adapté à votre vision produit. Intégrations blockchain incluses (certifié Alyra).",
+    "mobile_title": "Développement d'applications mobiles",
+    "mobile_desc": "Applications cross-platform avec React Native — des expériences fluides sur iOS et Android.",
+    "ux_title": "Accompagnement UX & Branding",
+    "ux_desc": "Façonnez l'identité de votre produit — branding, design systems et guidance UX/UI pour une expérience cohérente et mémorable."
+  },
+  "skills": {
+    "title": "Technologies & Compétences",
+    "technical": "Compétences techniques",
+    "soft": "Soft Skills",
+    "languages": "Langues"
+  },
+  "projects": {
+    "title": "Projets récents",
+    "view_more": "Voir plus de projets"
+  },
+  "cta": {
+    "title": "Prêt à collaborer ?",
+    "subtitle": "Discutons de votre projet et donnons vie à vos idées.",
+    "button": "Prendre contact"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "label": "Freelance Product Engineer",
+    "accroche": "I help B2B teams turn <h1>complex business workflows</h1> into clear, <h2>reliable and maintainable</h2> web products.",
+    "subphrase": "React / TypeScript · Product-oriented frontend · Prototyping · Light backend",
+    "hire_me": "Hire Me",
+    "discover": "Discover My Work",
+    "resume_en": "Resume EN",
+    "cv_fr": "CV FR",
+    "cv_es": "CV ES"
+  },
+  "services": {
+    "title": "Services",
+    "frontend_title": "Product-focused Frontend",
+    "frontend_desc": "Elegant, responsive UIs with React & TypeScript — crafted to engage users and enhance your product experience.",
+    "e2e_title": "End-to-End Product Development",
+    "e2e_desc": "From UX wireframes to production-ready apps — fullstack development tailored to your product vision. Includes blockchain integrations (certified by Alyra).",
+    "mobile_title": "Mobile App Development",
+    "mobile_desc": "Native-like cross-platform apps with React Native — delivering seamless experiences on iOS and Android.",
+    "ux_title": "UX & Branding Support",
+    "ux_desc": "Shape your product's identity — branding, design systems and UX/UI guidance for a cohesive and memorable experience."
+  },
+  "skills": {
+    "title": "Technologies & Skills",
+    "technical": "Technical Skills",
+    "soft": "Soft Skills",
+    "languages": "Languages"
+  },
+  "projects": {
+    "title": "Recent Projects",
+    "view_more": "View More Projects"
+  },
+  "cta": {
+    "title": "Ready to Work Together?",
+    "subtitle": "Let's discuss your project and bring your ideas to life.",
+    "button": "Get In Touch"
+  }
+}
