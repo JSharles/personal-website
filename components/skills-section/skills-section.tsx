@@ -12,14 +12,8 @@ export const SkillsSection = () => {
     "PostgreSQL", "AWS", "Serverless", "Vercel", "Golang",
   ];
 
-  const softSkills = [
-    "Product-minded", "UX-friendly", "Startup-focused", "Collaborative",
-    "Problem-solving", "Autonomous", "Communication", "Agile mindset",
-    "Adaptability", "Attention to detail", "Deal with ambiguity",
-    "Fast-paced environment", "International settings",
-  ];
-
-  const languages = ["French — Native", "English — B2/C1", "Spanish — A2/B1"];
+  const softSkills = t.raw("soft_skills") as string[];
+  const languages = t.raw("language_list") as string[];
 
   return (
     <section className="py-16 px-4">

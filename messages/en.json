@@ -25,11 +25,37 @@
     "title": "Technologies & Skills",
     "technical": "Technical Skills",
     "soft": "Soft Skills",
-    "languages": "Languages"
+    "languages": "Languages",
+    "soft_skills": [
+      "Product-minded",
+      "UX-friendly",
+      "Startup-focused",
+      "Collaborative",
+      "Problem-solving",
+      "Autonomous",
+      "Communication",
+      "Agile mindset",
+      "Adaptability",
+      "Attention to detail",
+      "Deal with ambiguity",
+      "Fast-paced environment",
+      "International settings"
+    ],
+    "language_list": [
+      "French — Native",
+      "English — B2/C1",
+      "Spanish — A2/B1"
+    ]
   },
   "projects": {
     "title": "Recent Projects",
-    "view_more": "View More Projects"
+    "view_more": "View More Projects",
+    "scaleway_desc": "Technical owner of an internal tool centralizing hardware catalog, assembly manuals, commercial offers and asset tracking into a single interface. Feature-based architecture, requirements gathering, Figma prototyping and full implementation.",
+    "stockoss_desc": "SaaS platform for logistics and storage management. Frontend & Fullstack contributions.",
+    "dgac_desc": "Internal application for Air Traffic Management.",
+    "moodoow_desc": "White-label mobile application platform for sports clubs — powering apps like USM Sapiac, enhancing fan experience.",
+    "qb3_desc": "Web3 project. Final capstone for Alyra's blockchain developer certification.",
+    "amate_desc": "Indie hacker / solopreneur project"
   },
   "cta": {
     "title": "Ready to Work Together?",

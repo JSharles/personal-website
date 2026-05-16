@@ -14,17 +14,19 @@ No test suite is configured.
 
 ## Architecture
 
-Single-page portfolio. The only route is `/` → `app/page.tsx` → `pages/landing-page.tsx`.
+Single-page portfolio with i18n. Routes: `app/[locale]/page.tsx` → `components/landing-page.tsx`.
 
-**Page assembly** (`pages/landing-page.tsx`): client component that detects mobile via `useIsMobile()` and renders either `HeroSectionDesktop` or `HeroSectionMobile`, then `ServicesSection` → `SkillsSection` → `ProjectsSection` → inline CTA.
+**Page assembly** (`components/landing-page.tsx`): client component that detects mobile via `useIsMobile()` and renders either `HeroSectionDesktop` or `HeroSectionMobile`, then `ServicesSection` → `SkillsSection` → `ProjectsSection` → inline CTA.
 
-**Hero layout** (`components/hero-section/hero-section-desktop.tsx`): `position: relative` section with `h-screen`. Photo is an `<Image fill>` in an `absolute left-0 w-[60%]` container. Gradient overlay is a sibling `div` placed **inside** the photo container (not on the section) using an inline CSS `linear-gradient` — Tailwind v4 does not support arbitrary gradient stop percentages. Text occupies an `absolute right-0 w-[40%]` container with `z-10`.
+**i18n**: `next-intl` v4, locales `en/fr/es`, defaultLocale `en`. Middleware in `middleware.ts` handles locale detection and redirects. Messages in `messages/{locale}.json`. Layout at `app/[locale]/layout.tsx` wraps content with `NextIntlClientProvider`. Root layout (`app/layout.tsx`) uses `getLocale()` from `next-intl/server` to set the `<html lang>` attribute dynamically.
 
-**Theming**: dark theme, all color tokens are CSS variables in `app/globals.css` under `:root`. Key values: `--background: #0D0D0F`, accent `--accent: #9333EA` (violet). Tailwind v4 maps them via `@theme inline`. Custom keyframes (`shine`, `gradient`) live in `tailwind.config.ts` at the repo root.
+**Hero layout** (`components/hero-section/hero-section-desktop.tsx`): `position: relative` section with `h-screen`. Photo is an `<Image fill>` in an `absolute left-0 w-[60%]` container. Text occupies an `absolute right-0 w-[40%]` container with `z-10`.
 
-**Font**: Space Grotesk (Google Fonts), injected as `--font-space-grotesk`, applied globally via `font-sans`.
+**Theming**: light theme, all color tokens are CSS variables in `app/globals.css` under `:root`. Key values: `--background: #F4F5F7`, `--foreground: #1C1917`, `--accent: #1C1917`. Tailwind v4 maps them via `@theme inline`. A `.dark` class exists in globals.css but is not currently activated.
 
-**Gradient cards**: both `ServiceCard` and project cards in `ProjectsSection` use a `color` prop to drive an inline `linear-gradient(135deg, ${color}18 0%, #0D0D0F 65%)` background and a tinted border. To add or change a card color, update the `color` field in the data array.
+**Font**: Inter (sans) + EB Garamond (serif), injected as `--font-inter` and `--font-eb-garamond`, applied globally via `font-sans` / `font-serif`.
+
+**Gradient cards**: both `ServiceCard` and project cards in `ProjectsSection` use a `color` prop to drive an inline `linear-gradient(135deg, ${color}18 0%, #F4F5F7 65%)` background and a tinted border. To add or change a card color, update the `color` field in the data array.
 
 **Providers** (`app/providers.tsx`): TanStack `QueryClientProvider`, Radix `TooltipProvider`, Sonner `Toaster`. Add global providers here.
 
@@ -36,6 +38,8 @@ Single-page portfolio. The only route is `/` → `app/page.tsx` → `pages/landi
 - The `@` path alias resolves to the repo root (`tsconfig.json`).
 - Mobile breakpoint is handled by `useIsMobile()` at the page level — desktop and mobile hero are separate components.
 - Avoid Tailwind arbitrary gradient stops (`from-[30%]`) — they don't work reliably in v4. Use inline `style` with `linear-gradient` instead.
+- All page-level components are client components (imported from `"use client"` `landing-page.tsx`), so use `useTranslations()` throughout. Only use `await getTranslations()` from `next-intl/server` for truly isolated server components not in the client tree.
+- `t.raw("key")` returns arrays/objects from messages — use it for translatable lists (soft skills, language list).
 
 ## Positioning
 
@@ -51,27 +55,27 @@ Not a "fullstack generalist". The positioning is: bridge between business comple
 GA4 via `@next/third-parties/google` in `app/layout.tsx`.
 
 ### ✅ Style global — done
-- Dark theme `#0D0D0F`, violet accent `#9333EA`, Space Grotesk font
+- Light theme `#F4F5F7`, foreground `#1C1917`, Inter + EB Garamond fonts
 - Gradient cards (services + projects)
 
 ### ✅ Photo landing page — done
 - `public/images/avatar.png` — photo principale hero
-- Hero desktop : photo gauche 60% + gradient inline + texte droite 40%
+- Hero desktop : photo gauche 60% + texte droite 40%
 
 ### ✅ Positionnement — done
 - Label : "Freelance Product Engineer"
-- Accroche : "I bridge the gap between business complexity and product clarity — from feature definition to reliable, maintainable implementation."
+- Accroche : "I help B2B teams turn complex business workflows into clear, reliable and maintainable web products."
 
 ### ✅ Expérience Scaleway — done
 - Ajoutée en première carte dans `ProjectsSection`
-- Logo : `public/images/scaleway-logo.png` (ou `scaleway-violet-logo.png`)
+- Logo : `public/images/scaleway-violet-logo.png`
 - Période : Sept 2025 — Apr 2026
 
-### Internationalisation (i18n) — FR / EN / ES
-- Traduire tout le contenu du site en français, anglais et espagnol
-- Évaluer next-intl (recommandé pour Next.js App Router) vs next-i18next
-- Gérer le routing par locale (`/fr`, `/en`, `/es`) ou via un cookie/préférence
-- Les 3 CVs sont déjà disponibles par langue dans le hero — cohérent avec l'ajout du i18n
+### ✅ Internationalisation (i18n) — FR / EN / ES — done
+- `next-intl` v4, routing `/en` `/fr` `/es`, middleware-based
+- Messages complets dans `messages/{en,fr,es}.json`
+- Hero, services, skills (titres + listes soft/languages), projects (titres + descriptions), CTA — tout traduit
+- `<html lang>` dynamique via `getLocale()` dans le root layout
 
 ### Assistant IA (bonus — showcase)
 - Chatbot répondant aux questions sur l'expérience/stack

@@ -3,6 +3,7 @@ import { Inter, EB_Garamond } from "next/font/google";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Providers } from "./providers";
+import { getLocale } from "next-intl/server";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -21,13 +22,14 @@ export const metadata: Metadata = {
     "Freelance Product Engineer — I help B2B teams turn complex business workflows into clear, reliable and maintainable web products.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={`${inter.variable} ${ebGaramond.variable} antialiased`}>
         <Providers>{children}</Providers>
       </body>

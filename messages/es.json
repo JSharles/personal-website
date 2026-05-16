@@ -25,11 +25,37 @@
     "title": "Tecnologías y Habilidades",
     "technical": "Habilidades técnicas",
     "soft": "Habilidades blandas",
-    "languages": "Idiomas"
+    "languages": "Idiomas",
+    "soft_skills": [
+      "Orientado a producto",
+      "Sensible a la UX",
+      "Cultura startup",
+      "Colaborativo",
+      "Resolución de problemas",
+      "Autónomo",
+      "Comunicación",
+      "Mentalidad ágil",
+      "Adaptabilidad",
+      "Atención al detalle",
+      "Gestión de la ambigüedad",
+      "Entorno dinámico",
+      "Entornos internacionales"
+    ],
+    "language_list": [
+      "Francés — Nativo",
+      "Inglés — B2/C1",
+      "Español — A2/B1"
+    ]
   },
   "projects": {
     "title": "Proyectos recientes",
-    "view_more": "Ver más proyectos"
+    "view_more": "Ver más proyectos",
+    "scaleway_desc": "Responsable técnico de una herramienta interna que centraliza el catálogo de hardware, manuales de ensamblaje, ofertas comerciales y seguimiento de activos en una sola interfaz. Arquitectura basada en features, toma de requisitos, prototipado en Figma e implementación completa.",
+    "stockoss_desc": "Plataforma SaaS para la gestión logística y de almacenamiento. Contribuciones frontend y fullstack.",
+    "dgac_desc": "Aplicación interna para la gestión del tráfico aéreo.",
+    "moodoow_desc": "Plataforma de aplicaciones móviles white-label para clubes deportivos — impulsando apps como USM Sapiac, mejorando la experiencia de los aficionados.",
+    "qb3_desc": "Proyecto Web3. Proyecto final para la certificación de desarrollador blockchain de Alyra.",
+    "amate_desc": "Proyecto indie hacker / solopreneur"
   },
   "cta": {
     "title": "¿Listo para trabajar juntos?",

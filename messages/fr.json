@@ -25,11 +25,37 @@
     "title": "Technologies & Compétences",
     "technical": "Compétences techniques",
     "soft": "Soft Skills",
-    "languages": "Langues"
+    "languages": "Langues",
+    "soft_skills": [
+      "Orienté produit",
+      "Sensible à l'UX",
+      "Culture startup",
+      "Collaboratif",
+      "Résolution de problèmes",
+      "Autonome",
+      "Communication",
+      "Esprit agile",
+      "Adaptabilité",
+      "Souci du détail",
+      "Gestion de l'ambiguïté",
+      "Environnement dynamique",
+      "Contexte international"
+    ],
+    "language_list": [
+      "Français — Natif",
+      "Anglais — B2/C1",
+      "Espagnol — A2/B1"
+    ]
   },
   "projects": {
     "title": "Projets récents",
-    "view_more": "Voir plus de projets"
+    "view_more": "Voir plus de projets",
+    "scaleway_desc": "Responsable technique d'un outil interne centralisant le catalogue matériel, les manuels d'assemblage, les offres commerciales et le suivi des assets dans une interface unique. Architecture feature-based, recueil des besoins, prototypage Figma et implémentation complète.",
+    "stockoss_desc": "Plateforme SaaS pour la gestion logistique et le stockage. Contributions frontend & fullstack.",
+    "dgac_desc": "Application interne pour la gestion du trafic aérien.",
+    "moodoow_desc": "Plateforme d'applications mobiles en marque blanche pour les clubs sportifs — alimentant des apps comme USM Sapiac, améliorant l'expérience des supporters.",
+    "qb3_desc": "Projet Web3. Projet de fin de formation pour la certification développeur blockchain d'Alyra.",
+    "amate_desc": "Projet indie hacker / solopreneur"
   },
   "cta": {
     "title": "Prêt à collaborer ?",
