@@ -81,11 +81,11 @@ export const SocialLinks = () => {
 
       <button onClick={handleScrollToTop} aria-label="Scroll to top">
         <Image
-          src="/images/inline-dark.png"
+          src="/images/logo-2026.png"
           alt="Scroll to top"
-          width={48}
-          height={48}
-          className="rounded-full hover:opacity-90 transition filter brightness-0 invert sepia saturate-200 hue-rotate-[330deg]"
+          width={24}
+          height={24}
+          className="transition brightness-0 invert sepia saturate-[300%] hue-rotate-[10deg]"
         />
       </button>
     </div>
