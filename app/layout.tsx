@@ -4,6 +4,7 @@ import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Providers } from "./providers";
 import { getLocale } from "next-intl/server";
+import { SITE_URL } from "@/lib/constants";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -17,6 +18,7 @@ const ebGaramond = EB_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Jean-Charles Barq - Freelance Product Engineer",
   description:
     "Freelance Product Engineer — I help B2B teams turn complex business workflows into clear, reliable and maintainable web products.",
