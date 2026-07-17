@@ -1,4 +1,8 @@
 {
+  "seo": {
+    "title": "Jean-Charles Barq | Product Engineer Freelance — React & Node.js",
+    "description": "Product Engineer freelance basé à Marseille. J'aide les équipes B2B à transformer des processus métier complexes en produits web clairs et fiables, avec ou sans IA."
+  },
   "hero": {
     "label": "Product Engineer · Intégration IA",
     "accroche": "J'aide les équipes B2B à transformer des <h1>processus métier complexes</h1> en produits web clairs, <h2>fiables et maintenables</h2>.",
