@@ -1,25 +1,31 @@
 {
   "hero": {
-    "label": "Freelance Product Engineer",
+    "label": "Product Engineer · AI Integration",
     "accroche": "I help B2B teams turn <h1>complex business workflows</h1> into clear, <h2>reliable and maintainable</h2> web products.",
     "opinion": "— The right product is the one your team can maintain without you.",
-    "subphrase": "React / TypeScript · Product-oriented frontend · Prototyping · Light backend",
+    "subphrase": "React / TypeScript · Node.js / NestJS · AI Integration",
     "hire_me": "Hire Me",
     "discover": "Discover My Work",
     "resume_en": "Resume EN",
     "cv_fr": "CV FR",
     "cv_es": "CV ES"
   },
+  "about": {
+    "title": "About",
+    "paragraph_1": "A Full Stack Developer and Product Engineer for over 6 years, I help companies design and build B2B web products, SaaS platforms and internal tools.",
+    "paragraph_2": "I get involved from the earliest stages of a project: understanding the business need, talking with users, clarifying user journeys, prototyping, technical decisions, development. My experience is mainly built on React, TypeScript, Next.js, React Native, Node.js and NestJS — and extends into mobile, UX and branding when the project calls for it.",
+    "paragraph_3": "Based in Marseille, I work remotely and travel occasionally across France for audit and scoping phases."
+  },
   "services": {
     "title": "Services",
-    "frontend_title": "Product-focused Frontend",
-    "frontend_desc": "Elegant, responsive UIs with React & TypeScript — crafted to engage users and enhance your product experience.",
-    "e2e_title": "End-to-End Product Development",
-    "e2e_desc": "From UX wireframes to production-ready apps — fullstack development tailored to your product vision. Includes blockchain integrations (certified by Alyra).",
-    "mobile_title": "Mobile App Development",
-    "mobile_desc": "Native-like cross-platform apps with React Native — delivering seamless experiences on iOS and Android.",
-    "ux_title": "UX & Branding Support",
-    "ux_desc": "Shape your product's identity — branding, design systems and UX/UI guidance for a cohesive and memorable experience."
+    "workflow_title": "From Business Need to Product",
+    "workflow_desc": "Understanding the need, talking with users, clarifying user journeys, prototyping — turning a business workflow into a product, with or without AI.",
+    "ai_title": "AI Feature Integration",
+    "ai_desc": "Documentation search, business assistants, automation of repetitive tasks — integrated directly into your existing tools.",
+    "fullstack_title": "Full Stack Development",
+    "fullstack_desc": "From design to production — custom web applications built with React/TypeScript, Node.js and NestJS.",
+    "revamp_title": "Product Revamp & Improvement",
+    "revamp_desc": "Modernizing an existing product: ease of use, code quality, testing and maintainability."
   },
   "skills": {
     "title": "Technologies & Skills",
@@ -59,7 +65,7 @@
   },
   "cta": {
     "title": "Ready to Work Together?",
-    "subtitle": "Let's discuss your project and bring your ideas to life.",
+    "subtitle": "Let's talk about your project and see how I can help.",
     "button": "Get In Touch"
   }
 }

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { HeroSectionMobile } from "@/components/hero-section/hero-section-mobile";
+import { AboutSection } from "@/components/about-section/about-section";
 import { ServicesSection } from "@/components/services-section/services-section";
 import { SkillsSection } from "@/components/skills-section/skills-section";
 import { ProjectsSection } from "@/components/projects-section/projects-section";
@@ -18,6 +19,7 @@ const LandingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-background">
       {isMobile ? <HeroSectionMobile /> : <HeroSectionDesktop />}
+      <AboutSection />
       <ServicesSection />
       <SkillsSection />
       <ProjectsSection />

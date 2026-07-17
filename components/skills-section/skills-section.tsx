@@ -7,9 +7,7 @@ export const SkillsSection = () => {
   const t = useTranslations("skills");
 
   const technicalSkills = [
-    "React", "React Native", "Node.js", "TypeScript", "JavaScript",
-    "Next.js", "NestJS", "Solidity", "Hardhat", "MongoDB",
-    "PostgreSQL", "AWS", "Serverless", "Vercel", "Golang",
+    "React", "React Native", "Node.js", "TypeScript", "Next.js", "NestJS",
   ];
 
   const softSkills = t.raw("soft_skills") as string[];

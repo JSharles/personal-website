@@ -1,25 +1,31 @@
 {
   "hero": {
-    "label": "Product Engineer Freelance",
+    "label": "Product Engineer · Integración IA",
     "accroche": "Ayudo a equipos B2B a convertir <h1>flujos de trabajo complejos</h1> en productos web claros, <h2>fiables y mantenibles</h2>.",
     "opinion": "— El buen producto es el que tu equipo puede mantener sin ti.",
-    "subphrase": "React / TypeScript · Frontend orientado a producto · Prototipado · Backend ligero",
+    "subphrase": "React / TypeScript · Node.js / NestJS · Integración IA",
     "hire_me": "Contáctame",
     "discover": "Ver mis proyectos",
     "resume_en": "Resume EN",
     "cv_fr": "CV FR",
     "cv_es": "CV ES"
   },
+  "about": {
+    "title": "Sobre mí",
+    "paragraph_1": "Desarrollador Full Stack y Product Engineer desde hace más de 6 años, ayudo a empresas a diseñar y desarrollar productos web B2B, plataformas SaaS y herramientas internas.",
+    "paragraph_2": "Intervengo desde las primeras etapas de un proyecto: comprensión de la necesidad de negocio, conversaciones con los usuarios, clarificación de los recorridos, prototipado, decisiones técnicas, desarrollo. Mi experiencia se basa principalmente en React, TypeScript, Next.js, React Native, Node.js y NestJS — y se extiende, según las necesidades, al móvil, la UX y el branding.",
+    "paragraph_3": "Con base en Marsella, trabajo en remoto y me desplazo puntualmente por toda Francia para las fases de auditoría y definición."
+  },
   "services": {
     "title": "Servicios",
-    "frontend_title": "Frontend orientado a producto",
-    "frontend_desc": "Interfaces elegantes y responsivas con React & TypeScript — diseñadas para atraer usuarios y mejorar la experiencia de producto.",
-    "e2e_title": "Desarrollo de producto integral",
-    "e2e_desc": "De wireframes UX a apps listas para producción — desarrollo fullstack adaptado a tu visión de producto. Incluye integraciones blockchain (certificado por Alyra).",
-    "mobile_title": "Desarrollo de apps móviles",
-    "mobile_desc": "Apps multiplataforma con React Native — experiencias fluidas en iOS y Android.",
-    "ux_title": "Soporte UX & Branding",
-    "ux_desc": "Define la identidad de tu producto — branding, design systems y orientación UX/UI para una experiencia coherente y memorable."
+    "workflow_title": "Del flujo de trabajo al producto",
+    "workflow_desc": "Comprensión de la necesidad, conversaciones con los usuarios, clarificación de los recorridos, prototipado — para convertir un flujo de trabajo de negocio en un producto, con o sin IA.",
+    "ai_title": "Integración de funcionalidades IA",
+    "ai_desc": "Búsqueda documental, asistentes de negocio, automatización de tareas repetitivas — integrados directamente en tus herramientas existentes.",
+    "fullstack_title": "Desarrollo Full Stack",
+    "fullstack_desc": "Del diseño a producción — aplicaciones web a medida con React/TypeScript, Node.js y NestJS.",
+    "revamp_title": "Rediseño y mejora de producto",
+    "revamp_desc": "Modernización de un producto existente: facilidad de uso, calidad de código, tests y mantenibilidad."
   },
   "skills": {
     "title": "Tecnologías y Habilidades",
@@ -59,7 +65,7 @@
   },
   "cta": {
     "title": "¿Listo para trabajar juntos?",
-    "subtitle": "Hablemos de tu proyecto y hagamos realidad tus ideas.",
+    "subtitle": "Hablemos de tu proyecto y veamos cómo puedo ayudarte.",
     "button": "Contactar"
   }
 }

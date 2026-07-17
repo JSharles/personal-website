@@ -1,6 +1,6 @@
 "use client";
 
-import { Briefcase, Smartphone, User, Palette } from "lucide-react";
+import { Target, Sparkles, Briefcase, RefreshCw } from "lucide-react";
 import { ServiceCard } from "../service-card/service-card";
 import { useTranslations } from "next-intl";
 
@@ -8,10 +8,10 @@ export const ServicesSection = () => {
   const t = useTranslations("services");
 
   const services = [
-    { icon: <User className="h-6 w-6" />, titleKey: "frontend_title", descKey: "frontend_desc", color: "#9333ea" },
-    { icon: <Briefcase className="h-6 w-6" />, titleKey: "e2e_title", descKey: "e2e_desc", color: "#3b82f6" },
-    { icon: <Smartphone className="h-6 w-6" />, titleKey: "mobile_title", descKey: "mobile_desc", color: "#10b981" },
-    { icon: <Palette className="h-6 w-6" />, titleKey: "ux_title", descKey: "ux_desc", color: "#f97316" },
+    { icon: <Target className="h-6 w-6" />, titleKey: "workflow_title", descKey: "workflow_desc", color: "#9333ea" },
+    { icon: <Sparkles className="h-6 w-6" />, titleKey: "ai_title", descKey: "ai_desc", color: "#3b82f6" },
+    { icon: <Briefcase className="h-6 w-6" />, titleKey: "fullstack_title", descKey: "fullstack_desc", color: "#10b981" },
+    { icon: <RefreshCw className="h-6 w-6" />, titleKey: "revamp_title", descKey: "revamp_desc", color: "#f97316" },
   ];
 
   return (

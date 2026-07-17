@@ -16,7 +16,7 @@ No test suite is configured.
 
 Single-page portfolio with i18n. Routes: `app/[locale]/page.tsx` → `components/landing-page.tsx`.
 
-**Page assembly** (`components/landing-page.tsx`): client component that detects mobile via `useIsMobile()` and renders either `HeroSectionDesktop` or `HeroSectionMobile`, then `ServicesSection` → `SkillsSection` → `ProjectsSection` → inline CTA.
+**Page assembly** (`components/landing-page.tsx`): client component that detects mobile via `useIsMobile()` and renders either `HeroSectionDesktop` or `HeroSectionMobile`, then `AboutSection` → `ServicesSection` → `SkillsSection` → `ProjectsSection` → inline CTA.
 
 **i18n**: `next-intl` v4, locales `en/fr/es`, defaultLocale `en`. Middleware in `middleware.ts` handles locale detection and redirects. Messages in `messages/{locale}.json`. Layout at `app/[locale]/layout.tsx` wraps content with `NextIntlClientProvider`. Root layout (`app/layout.tsx`) uses `getLocale()` from `next-intl/server` to set the `<html lang>` attribute dynamically.
 
@@ -43,9 +43,9 @@ Single-page portfolio with i18n. Routes: `app/[locale]/page.tsx` → `components
 
 ## Positioning
 
-**Jean-Charles Barq — Freelance Product Engineer**
+**Jean-Charles Barq — Product Engineer · Intégration IA**
 
-Not a "fullstack generalist". The positioning is: bridge between business complexity and product clarity, for B2B SaaS and companies with complex internal tools. React / TypeScript is the primary stack but the label intentionally omits the tech to avoid the pure-dev silo. Backend (Node / NestJS / PostgreSQL) is a supporting capability, not the main pitch.
+Full Stack / Product Engineer (6+ years) who bridges business complexity and product clarity for B2B SaaS and companies with complex internal tools — from requirements gathering through prototyping to shipped product, with or without AI. AI feature integration (search over internal docs, business assistants, workflow automation) is a secondary, deliberately modest specialty — it converts well on Malt, but is not yet backed by shipped AI work, so it's positioned as one service among others (`services.ai_title` in `services-section.tsx`), never as the primary label. The hero label/subphrase carry the AI mention; the accroche and opinion line stay unchanged from the original generalist pitch. Stack: React, TypeScript, Next.js, React Native, Node.js, NestJS. Mobile and UX/branding capability moved out of dedicated service cards into the `AboutSection` bio (`messages.about`) to avoid overcrowding the 4-card services grid.
 
 ---
 
@@ -63,8 +63,9 @@ GA4 via `@next/third-parties/google` in `app/layout.tsx`.
 - Hero desktop : photo gauche 60% + texte droite 40%
 
 ### ✅ Positionnement — done
-- Label : "Freelance Product Engineer"
-- Accroche : "I help B2B teams turn complex business workflows into clear, reliable and maintainable web products."
+- Label : "Product Engineer · Intégration IA" (mise à jour 2026-07 pour aligner avec le positioning Malt qui convertit mieux)
+- Accroche : "I help B2B teams turn complex business workflows into clear, reliable and maintainable web products." (inchangée, volontairement — voir section Positioning ci-dessus)
+- Section `AboutSection` ajoutée après le Hero pour le bio/parcours (mobile, UX, branding)
 
 ### ✅ Expérience Scaleway — done
 - Ajoutée en première carte dans `ProjectsSection`
