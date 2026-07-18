@@ -32,6 +32,8 @@ export default async function RootLayout({
   const locale = await getLocale();
   return (
     <html lang={locale}>
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://region1.google-analytics.com" />
       <body className={`${inter.variable} ${ebGaramond.variable} antialiased`}>
         <Providers>{children}</Providers>
       </body>

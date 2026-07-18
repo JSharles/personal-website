@@ -43,9 +43,11 @@ Single-page portfolio with i18n. Routes: `app/[locale]/page.tsx` → `components
 
 ## Positioning
 
-**Jean-Charles Barq — Product Engineer · Intégration IA**
+**Jean-Charles Barq — Product Engineer · Développeur Full Stack · Intégration IA**
 
 Full Stack / Product Engineer (6+ years) who bridges business complexity and product clarity for B2B SaaS and companies with complex internal tools — from requirements gathering through prototyping to shipped product, with or without AI. AI feature integration (search over internal docs, business assistants, workflow automation) is a secondary, deliberately modest specialty — it converts well on Malt, but is not yet backed by shipped AI work, so it's positioned as one service among others (`services.ai_title` in `services-section.tsx`), never as the primary label. The hero label/subphrase carry the AI mention; the accroche and opinion line stay unchanged from the original generalist pitch. Stack: React, TypeScript, Next.js, React Native, Node.js, NestJS. Mobile and UX/branding capability moved out of dedicated service cards into the `AboutSection` bio (`messages.about`) to avoid overcrowding the 4-card services grid.
+
+**2026-07 SEO update**: added "Développeur Full Stack" / "Full Stack Developer" alongside "Product Engineer" in `hero.label` (all locales) — "Product Engineer" alone under-indexes in France, where "développeur full stack" is a far more searched term. Kept out of `seo.title` (the `<title>` tag, highest-weight SERP signal) to avoid truncation past ~60-70 chars — title keeps just "Product Engineer & Full Stack Developer", AI Integration deliberately stays out of the title too (consistent with it being the secondary specialty) but still appears in `hero.label`, `subphrase`, and `seo.description`, so it still feeds ranking/snippet text without being the headline.
 
 ---
 
