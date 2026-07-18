@@ -17,7 +17,7 @@ const LandingPage: React.FC = () => {
   const t = useTranslations("cta");
 
   return (
-    <div className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background">
       {isMobile ? <HeroSectionMobile /> : <HeroSectionDesktop />}
       <AboutSection />
       <ServicesSection />
@@ -34,7 +34,7 @@ const LandingPage: React.FC = () => {
           </Button>
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 

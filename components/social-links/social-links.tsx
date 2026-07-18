@@ -14,6 +14,7 @@ export const SocialLinks = () => {
         href="https://www.linkedin.com/in/jeancharlesbarq/?locale=en"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="LinkedIn"
       >
         <Linkedin className="w-6 h-6 text-white opacity-70 hover:opacity-100 transition" />
       </a>
@@ -52,6 +53,7 @@ export const SocialLinks = () => {
         href="mailto:jeancharlesbarq@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Email"
       >
         <Mail className="w-6 h-6 text-white opacity-70 hover:opacity-100 transition" />
       </a>
@@ -75,6 +77,7 @@ export const SocialLinks = () => {
         href="https://calendly.com/jeancharlesbarq/30min"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Schedule a call"
       >
         <Calendar className="w-6 h-6 text-white opacity-70 hover:opacity-100 transition" />
       </a>

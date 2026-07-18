@@ -71,7 +71,7 @@ export const HeroSectionDesktop = () => {
             >
               {t("resume_en")}
             </Link>
-            <span className="text-muted-foreground/30">·</span>
+            <span className="text-muted-foreground/30" aria-hidden="true">·</span>
             <Link
               href="https://phrygian-turnover-e78.notion.site/Jean-Charles-Barq-216d5e95fa2480139c2afdb1e9f03b2e"
               target="_blank"
@@ -80,7 +80,7 @@ export const HeroSectionDesktop = () => {
             >
               {t("cv_fr")}
             </Link>
-            <span className="text-muted-foreground/30">·</span>
+            <span className="text-muted-foreground/30" aria-hidden="true">·</span>
             <Link
               href="https://phrygian-turnover-e78.notion.site/Jean-Charles-Barq-216d5e95fa2480e681c0dfa32fc100b1"
               target="_blank"
