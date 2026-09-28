@@ -63,7 +63,7 @@ export const AmateLogo = ({ className = "size-6" }: { className?: string }) => (
 );
 
 // Back to top, carried by the a-mate logo (as in the original menu bar).
-export const LogoButton = ({ size = "size-9" }: { size?: string }) => {
+export const LogoButton = ({ size = "size-7 sm:size-8 lg:size-9" }: { size?: string }) => {
   const t = useTranslations("contact");
   return (
     <Tooltip>
@@ -82,20 +82,24 @@ export const LogoButton = ({ size = "size-9" }: { size?: string }) => {
   );
 };
 
-// Header menu bar (desktop): every channel as an icon in a pill, each
-// labeled by a tooltip, then the blue a-mate logo (back to top).
+// Header menu bar: every channel as an icon in a pill, each labeled by a
+// tooltip, then the blue a-mate logo (back to top). Smaller icons below `lg`
+// so it fits a phone next to the locale pill.
 export const SocialLinks = () => {
   const t = useTranslations("contact");
 
   return (
-    <div className="flex items-center gap-1 rounded-full border border-border bg-background/80 p-1.5 backdrop-blur-md">
+    <div className="flex items-center gap-0.5 rounded-full border border-border bg-background/80 p-1 backdrop-blur-md lg:gap-1 lg:p-1.5">
       {CHANNELS.map((channel) => (
         <Tooltip key={channel.key}>
           <TooltipTrigger asChild>
             <a
               href={channel.href}
               aria-label={t(channel.key)}
-              className="group inline-flex size-9 items-center justify-center rounded-full hover:bg-primary/10"
+              className={`group items-center justify-center rounded-full hover:bg-primary/10 size-7 sm:size-8 lg:size-9 ${
+                // The call is already in the hero and the mobile bottom bar
+                channel.key === "call" ? "hidden lg:inline-flex" : "inline-flex"
+              }`}
               {...externalProps(channel.href)}
             >
               {channel.icon}
