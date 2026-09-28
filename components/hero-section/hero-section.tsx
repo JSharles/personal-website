@@ -16,7 +16,7 @@ import { CALENDLY_URL, MALT_URL, RESUME_URLS } from "@/lib/links";
 //   are both centered on the vertical axis. The photo width follows the
 //   viewport height.
 // - Row 2: the method as a strip on a hairline: [01] → [02] → [03].
-// Below `lg`: text, actions, figure, then the steps as a list.
+// Below `lg`: text, actions, the steps as a list, then the figure.
 // Blue stays on type; the buttons are light fill + outline (lib/button-styles).
 export const HeroSection = () => {
   const t = useTranslations("hero");
@@ -26,13 +26,15 @@ export const HeroSection = () => {
   const resumeUrl = RESUME_URLS[locale] ?? RESUME_URLS.en;
 
   return (
-    <section className="relative w-full overflow-hidden bg-background px-6 pt-28 pb-16 lg:grid lg:min-h-[100svh] lg:grid-rows-[minmax(0,1fr)_auto] lg:gap-y-10 lg:px-12 lg:pb-10 lg:pt-[112px]">
-      <div className="lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-6 lg:self-stretch">
+    <section className="relative flex w-full flex-col overflow-hidden bg-background px-6 pt-28 pb-16 lg:grid lg:min-h-[100svh] lg:grid-rows-[minmax(0,1fr)_auto] lg:gap-y-10 lg:px-12 lg:pb-10 lg:pt-[112px]">
+      {/* `contents` below `lg`: its children join the section's flex column so
+          the steps can sit between the actions and the photo on mobile */}
+      <div className="contents lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-6 lg:self-stretch">
         {/* Text column, with the rhythm of the LangGraph reference: a small gap
             from the signature to the role, one headline line of air before the
             offer, then two buttons of equal height. Centered on the page's
             vertical axis, like the photo. */}
-        <div className="relative z-10 lg:col-span-7">
+        <div className="relative z-10 order-1 lg:order-none lg:col-span-7">
           <h1>
             {/* Signature line: the blue a-mate logo + a-mate.tech. The name is
                 shown under the photo; here it stays for search engines and
@@ -68,7 +70,7 @@ export const HeroSection = () => {
             grayscale photo draws the shadows, and a `lighten` layer lifts
             those shadows to the page ground. Under it: the name in the site's
             bracket grammar, then the stack and the links. */}
-        <figure className="mt-14 w-full max-w-sm lg:col-span-4 lg:col-start-9 lg:mt-0 lg:w-[min(400px,calc((100svh-24rem)*0.8))] lg:max-w-none lg:justify-self-end">
+        <figure className="order-3 mt-14 w-full max-w-sm lg:order-none lg:col-span-4 lg:col-start-9 lg:mt-0 lg:w-[min(400px,calc((100svh-24rem)*0.8))] lg:max-w-none lg:justify-self-end">
           <div
             className="relative isolate aspect-[4/5] w-full overflow-hidden rounded-md border border-border"
             style={{ backgroundColor: "color-mix(in srgb, var(--primary) 48%, var(--background))" }}
@@ -112,11 +114,12 @@ export const HeroSection = () => {
         </figure>
       </div>
 
-      {/* The method as a strip on a hairline */}
-      <ol className="relative z-10 mt-14 flex flex-col gap-3 border-t border-border pt-6 font-mono text-base text-primary lg:mt-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:self-end lg:text-xl">
+      {/* The method as a strip on a hairline, three columns on every screen
+          (on phones the index sits above each label) */}
+      <ol className="relative z-10 order-2 mt-12 grid grid-cols-3 gap-4 border-t border-border pt-6 font-mono text-sm text-primary lg:order-none lg:mt-0 lg:gap-6 lg:self-end lg:text-xl">
         {steps.map((step, index) => (
-          <li key={index} className="flex items-center gap-3 lg:gap-4">
-            <span className="text-sm text-primary/70">[0{index + 1}]</span>
+          <li key={index} className="flex flex-col gap-1 lg:flex-row lg:items-center lg:gap-4">
+            <span className="text-xs text-primary/70 lg:text-sm">[0{index + 1}]</span>
             <span>{step}</span>
             {index < steps.length - 1 && (
               <ArrowRight
