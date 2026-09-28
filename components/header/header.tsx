@@ -1,11 +1,17 @@
-import { SocialLinks } from "../social-links/social-links";
+import { MobileMenu, SocialLinks } from "../social-links/social-links";
 import { LocaleSwitcher } from "../locale-switcher/locale-switcher";
 
-// Fixed menu bar, on every screen size: language pill on the left, channel
-// pill (ending with the blue a-mate logo) on the right.
+// Fixed menu bar: language pill on the left; on the right, from `lg`, the
+// channel pill ending with the blue a-mate logo, and below `lg` the logo next
+// to a hamburger that opens the channels in a side panel.
 export const Header = () => (
-  <header className="fixed top-4 left-0 z-50 flex h-16 w-full items-center justify-between gap-2 bg-transparent px-3 sm:px-4 lg:px-6">
+  <header className="fixed top-4 left-0 z-50 flex h-16 w-full items-center justify-between bg-transparent px-6">
     <LocaleSwitcher />
-    <SocialLinks />
+    <div className="hidden lg:block">
+      <SocialLinks />
+    </div>
+    <div className="lg:hidden">
+      <MobileMenu />
+    </div>
   </header>
 );

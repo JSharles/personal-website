@@ -37,7 +37,7 @@ export const LocaleSwitcher = () => {
             aria-label={LANGUAGE_NAMES[l]}
             aria-current={locale === l ? "true" : undefined}
             lang={l}
-            className={`inline-flex h-8 min-w-8 items-center justify-center rounded-full px-1.5 text-xs lg:h-9 lg:min-w-9 lg:px-2 font-medium uppercase tracking-widest transition-colors ${
+            className={`inline-flex h-9 min-w-9 items-center justify-center rounded-full px-2 text-xs font-medium uppercase tracking-widest transition-colors ${
               locale === l ? "text-primary" : "text-muted-foreground hover:text-foreground"
             }`}
           >

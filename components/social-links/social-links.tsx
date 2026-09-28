@@ -1,10 +1,11 @@
 "use client";
 
 import { ReactNode } from "react";
-import { ArrowRight, ArrowUpRight, Calendar, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Calendar, Linkedin, Mail, Menu } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import {
   CALENDLY_URL,
   EMAIL_URL,
@@ -63,7 +64,7 @@ export const AmateLogo = ({ className = "size-6" }: { className?: string }) => (
 );
 
 // Back to top, carried by the a-mate logo (as in the original menu bar).
-export const LogoButton = ({ size = "size-7 sm:size-8 lg:size-9" }: { size?: string }) => {
+export const LogoButton = ({ size = "size-9" }: { size?: string }) => {
   const t = useTranslations("contact");
   return (
     <Tooltip>
@@ -82,24 +83,20 @@ export const LogoButton = ({ size = "size-7 sm:size-8 lg:size-9" }: { size?: str
   );
 };
 
-// Header menu bar: every channel as an icon in a pill, each labeled by a
-// tooltip, then the blue a-mate logo (back to top). Smaller icons below `lg`
-// so it fits a phone next to the locale pill.
+// Header menu bar (desktop): every channel as an icon in a pill, each
+// labeled by a tooltip, then the blue a-mate logo (back to top).
 export const SocialLinks = () => {
   const t = useTranslations("contact");
 
   return (
-    <div className="flex items-center gap-0.5 rounded-full border border-border bg-background/80 p-1 backdrop-blur-md lg:gap-1 lg:p-1.5">
+    <div className="flex items-center gap-1 rounded-full border border-border bg-background/80 p-1.5 backdrop-blur-md">
       {CHANNELS.map((channel) => (
         <Tooltip key={channel.key}>
           <TooltipTrigger asChild>
             <a
               href={channel.href}
               aria-label={t(channel.key)}
-              className={`group items-center justify-center rounded-full hover:bg-primary/10 size-7 sm:size-8 lg:size-9 ${
-                // The call is already in the hero and the mobile bottom bar
-                channel.key === "call" ? "hidden lg:inline-flex" : "inline-flex"
-              }`}
+              className="group inline-flex size-9 items-center justify-center rounded-full hover:bg-primary/10"
               {...externalProps(channel.href)}
             >
               {channel.icon}
@@ -109,6 +106,51 @@ export const SocialLinks = () => {
         </Tooltip>
       ))}
       <LogoButton />
+    </div>
+  );
+};
+
+// Header menu bar (mobile): the blue a-mate logo (back to top) next to a
+// hamburger that opens a panel listing every channel with its label.
+export const MobileMenu = () => {
+  const t = useTranslations("contact");
+
+  return (
+    <div className="flex items-center gap-1 rounded-full border border-border bg-background/80 p-1.5 backdrop-blur-md">
+      <LogoButton />
+      <Sheet>
+        <SheetTrigger asChild>
+          <button
+            type="button"
+            aria-label={t("menu")}
+            className="inline-flex size-9 items-center justify-center rounded-full text-foreground/80 hover:bg-primary/10 hover:text-foreground"
+          >
+            <Menu className="size-5" aria-hidden="true" />
+          </button>
+        </SheetTrigger>
+        <SheetContent side="right" className="w-[82vw] max-w-sm border-border bg-background p-0">
+          <SheetTitle className="px-6 pb-2 pt-6 font-mono text-sm font-normal lowercase text-primary">
+            a-mate.tech
+          </SheetTitle>
+          <ul className="px-3 pb-6">
+            {CHANNELS.map((channel) => (
+              <li key={channel.key}>
+                <a
+                  href={channel.href}
+                  className="group flex items-center gap-4 rounded-md px-3 py-3.5 text-foreground hover:bg-primary/10"
+                  {...externalProps(channel.href)}
+                >
+                  {channel.icon}
+                  <span className="font-mono text-sm lowercase">
+                    {t(channel.key === "call" ? "call_short" : channel.key)}
+                  </span>
+                  <ArrowUpRight className="ml-auto size-4 text-muted-foreground" aria-hidden="true" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </SheetContent>
+      </Sheet>
     </div>
   );
 };
