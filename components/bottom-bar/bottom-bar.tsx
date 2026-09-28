@@ -1,18 +1,47 @@
 "use client";
 
-import { useIsMobile } from "@/hooks/use-mobile";
-import { SocialLinks } from "../social-links/social-links";
+import { useEffect, useState } from "react";
+import { MobileContactBar } from "../social-links/social-links";
 
+// Sticky contact bar below `lg`. It stays out of the way while the hero
+// actions or the closing section (which carry the same actions) are on
+// screen, and only slides up once the visitor has scrolled past the hero.
 export const BottomBar = () => {
-  const isMobile = useIsMobile();
+  const [visible, setVisible] = useState(false);
 
-  if (!isMobile) return null;
+  useEffect(() => {
+    const heroActions = document.getElementById("hero-actions");
+    const closing = document.getElementById("contact");
+    if (!heroActions || !closing) return;
+
+    let pastHero = false;
+    let closingInView = false;
+    const update = () => setVisible(pastHero && !closingInView);
+
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.target === heroActions) {
+          pastHero = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+        } else {
+          closingInView = entry.isIntersecting;
+        }
+      }
+      update();
+    });
+    observer.observe(heroActions);
+    observer.observe(closing);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <div className="fixed w-screen bottom-4 px-4 flex justify-center z-50 pointer-events-none">
-      <div className="pointer-events-auto">
-        <SocialLinks />
-      </div>
+    <div
+      className={`fixed inset-x-0 bottom-0 z-50 transition-transform duration-300 ease-out motion-reduce:transition-none lg:hidden ${
+        visible ? "translate-y-0" : "translate-y-full"
+      }`}
+      aria-hidden={!visible}
+      inert={!visible}
+    >
+      <MobileContactBar />
     </div>
   );
 };

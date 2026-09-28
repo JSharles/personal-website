@@ -4,6 +4,13 @@ import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
+// Each language is named in itself, so the label reads right whatever the page locale.
+const LANGUAGE_NAMES: Record<string, string> = {
+  en: "English",
+  fr: "Français",
+  es: "Español",
+};
+
 export const LocaleSwitcher = () => {
   const locale = useLocale();
   const router = useRouter();
@@ -16,21 +23,22 @@ export const LocaleSwitcher = () => {
   };
 
   return (
-    <div className="flex items-center gap-1 border border-white/10 py-2 px-3 bg-black/50 backdrop-blur-md rounded-full">
+    <div className="flex items-center gap-0.5 rounded-full border border-border bg-background/80 p-1 font-mono backdrop-blur-md">
       {routing.locales.map((l, i) => (
-        <span key={l} className="flex items-center gap-1">
+        <span key={l} className="flex items-center gap-0.5">
           {i > 0 && (
-            <span className="text-white/20 text-xs" aria-hidden="true">
+            <span className="text-xs text-muted-foreground/40" aria-hidden="true">
               ·
             </span>
           )}
           <button
+            type="button"
             onClick={() => switchLocale(l)}
-            aria-label={`Switch to ${l.toUpperCase()}`}
-            className={`text-xs font-medium tracking-widest uppercase transition-colors ${
-              locale === l
-                ? "text-white"
-                : "text-white/70 hover:text-white"
+            aria-label={LANGUAGE_NAMES[l]}
+            aria-current={locale === l ? "true" : undefined}
+            lang={l}
+            className={`inline-flex h-9 min-w-9 items-center justify-center rounded-full px-2 text-xs font-medium uppercase tracking-widest transition-colors ${
+              locale === l ? "text-primary" : "text-muted-foreground hover:text-foreground"
             }`}
           >
             {l}

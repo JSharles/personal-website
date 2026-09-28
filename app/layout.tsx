@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, EB_Garamond } from "next/font/google";
+import { Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Providers } from "./providers";
@@ -11,10 +11,10 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const ebGaramond = EB_Garamond({
-  variable: "--font-eb-garamond",
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <link rel="preconnect" href="https://www.googletagmanager.com" />
       <link rel="preconnect" href="https://region1.google-analytics.com" />
-      <body className={`${inter.variable} ${ebGaramond.variable} antialiased`}>
+      <body className={`${inter.variable} ${ibmPlexMono.variable} antialiased`}>
         <Providers>{children}</Providers>
       </body>
       <GoogleAnalytics gaId="G-8YPSNKYLHY" />

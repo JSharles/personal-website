@@ -1,20 +1,17 @@
-"use client";
-
-import { useIsMobile } from "@/hooks/use-mobile";
-import { SocialLinks } from "../social-links/social-links";
+import { LogoButton, SocialLinks } from "../social-links/social-links";
 import { LocaleSwitcher } from "../locale-switcher/locale-switcher";
 
-export const Header = () => {
-  const isMobile = useIsMobile();
-
-  return (
-    <header className="fixed top-4 left-0 w-full h-16 px-6 bg-transparent z-50 flex items-center">
-      <LocaleSwitcher />
-      {!isMobile && (
-        <div className="ml-auto">
-          <SocialLinks />
-        </div>
-      )}
-    </header>
-  );
-};
+// Fixed menu bar: language pill on the left; on the right, from `lg`, the
+// channel pill ending with the blue a-mate logo, and below `lg` the logo
+// alone in its own pill (the channels live in the BottomBar there).
+export const Header = () => (
+  <header className="fixed top-4 left-0 z-50 flex h-16 w-full items-center px-6 bg-transparent">
+    <LocaleSwitcher />
+    <div className="ml-auto hidden lg:block">
+      <SocialLinks />
+    </div>
+    <div className="ml-auto rounded-full border border-border bg-background/80 p-1 backdrop-blur-md lg:hidden">
+      <LogoButton />
+    </div>
+  </header>
+);

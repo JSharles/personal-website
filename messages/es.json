@@ -5,56 +5,84 @@
   },
   "hero": {
     "label": "Product Engineer · Desarrollador Full Stack · Integración IA",
-    "accroche": "Ayudo a equipos B2B a convertir <h1>flujos de trabajo complejos</h1> en productos web claros, <h2>fiables y mantenibles</h2>.",
-    "opinion": "— El buen producto es el que tu equipo puede mantener sin ti.",
-    "subphrase": "React / TypeScript · Node.js / NestJS · Integración IA",
-    "hire_me": "Contáctame",
-    "discover": "Ver mis proyectos",
-    "resume_en": "Resume EN",
-    "cv_fr": "CV FR",
-    "cv_es": "CV ES"
+    "headline": "product engineer.",
+    "steps": [
+      "entender el negocio",
+      "diseñar el producto",
+      "entregarlo sólido"
+    ],
+    "accroche": "Transformo tus <strong>procesos de negocio complejos</strong> en productos claros, <strong>fiables y mantenibles</strong>.",
+    "subphrase": "Full Stack · React / TypeScript · Node.js / NestJS · Integración IA"
   },
   "about": {
     "title": "Sobre mí",
     "paragraph_1": "Desarrollador Full Stack y Product Engineer desde hace más de 6 años, ayudo a empresas a diseñar y desarrollar productos web B2B, plataformas SaaS y herramientas internas.",
-    "paragraph_2": "Intervengo desde las primeras etapas de un proyecto: comprensión de la necesidad de negocio, conversaciones con los usuarios, clarificación de los recorridos, prototipado, decisiones técnicas, desarrollo. Mi experiencia se basa principalmente en React, TypeScript, Next.js, React Native, Node.js y NestJS — y se extiende, según las necesidades, al móvil, la UX y el branding.",
-    "paragraph_3": "Con base en Marsella, trabajo en remoto y me desplazo puntualmente por toda Francia para las fases de auditoría y definición."
+    "paragraph_2": "Intervengo desde las primeras etapas de un proyecto: comprensión de la necesidad de negocio, conversaciones con los usuarios, clarificación de los recorridos, prototipado, decisiones técnicas, desarrollo. Según las necesidades, eso se extiende al móvil, la UX y el branding.",
+    "paragraph_3": "Con base en Marsella, trabajo en remoto y me desplazo puntualmente por toda Francia para las fases de auditoría y definición.",
+    "facts": [
+      {
+        "label": "Experiencia",
+        "value": "6+ años"
+      },
+      {
+        "label": "Enfoque",
+        "value": "SaaS B2B y herramientas internas"
+      },
+      {
+        "label": "Stack",
+        "value": "React · TypeScript · Next.js · React Native · Node.js · NestJS"
+      },
+      {
+        "label": "Idiomas",
+        "value": "Francés (nativo) · Inglés (B2/C1) · Español (A2/B1)"
+      }
+    ]
   },
   "services": {
     "title": "Servicios",
-    "workflow_title": "Del flujo de trabajo al producto",
-    "workflow_desc": "Comprensión de la necesidad, conversaciones con los usuarios, clarificación de los recorridos, prototipado — para convertir un flujo de trabajo de negocio en un producto, con o sin IA.",
-    "ai_title": "Integración de funcionalidades IA",
-    "ai_desc": "Búsqueda documental, asistentes de negocio, automatización de tareas repetitivas — integrados directamente en tus herramientas existentes.",
-    "fullstack_title": "Desarrollo Full Stack",
-    "fullstack_desc": "Del diseño a producción — aplicaciones web a medida con React/TypeScript, Node.js y NestJS.",
-    "revamp_title": "Rediseño y mejora de producto",
-    "revamp_desc": "Modernización de un producto existente: facilidad de uso, calidad de código, tests y mantenibilidad."
-  },
-  "skills": {
-    "title": "Tecnologías y Habilidades",
-    "technical": "Habilidades técnicas",
-    "soft": "Habilidades blandas",
-    "languages": "Idiomas",
-    "soft_skills": [
-      "Orientado a producto",
-      "Sensible a la UX",
-      "Cultura startup",
-      "Colaborativo",
-      "Resolución de problemas",
-      "Autónomo",
-      "Comunicación",
-      "Mentalidad ágil",
-      "Adaptabilidad",
-      "Atención al detalle",
-      "Gestión de la ambigüedad",
-      "Entorno dinámico",
-      "Entornos internacionales"
-    ],
-    "language_list": [
-      "Francés — Nativo",
-      "Inglés — B2/C1",
-      "Español — A2/B1"
+    "items": [
+      {
+        "question": "¿Qué problema resolvemos?",
+        "note": "El producto empieza por el negocio, no por el código.",
+        "highlights": [
+          "Recogida de necesidades",
+          "Entrevistas con usuarios"
+        ],
+        "tags": [
+          "Mapeo de procesos",
+          "Auditoría de lo existente",
+          "Definición del alcance"
+        ]
+      },
+      {
+        "question": "¿Cómo debe ser?",
+        "note": "Prototipar antes de construir.",
+        "highlights": [
+          "Prototipado en Figma",
+          "Recorridos de usuario"
+        ],
+        "tags": [
+          "Arquitectura",
+          "Decisiones técnicas",
+          "Priorización del MVP",
+          "Integración de IA"
+        ]
+      },
+      {
+        "question": "¿Aguantará con el tiempo?",
+        "note": "Entregar, medir, iterar.",
+        "highlights": [
+          "Desarrollo Full Stack",
+          "Tests"
+        ],
+        "tags": [
+          "React / TypeScript",
+          "Node.js / NestJS",
+          "CI/CD",
+          "Rediseño de producto",
+          "Mantenibilidad"
+        ]
+      }
     ]
   },
   "projects": {
@@ -63,13 +91,26 @@
     "scaleway_desc": "Responsable técnico de una herramienta interna que centraliza el catálogo de hardware, manuales de ensamblaje, ofertas comerciales y seguimiento de activos en una sola interfaz. Arquitectura basada en features, toma de requisitos, prototipado en Figma e implementación completa.",
     "stockoss_desc": "Plataforma SaaS para la gestión logística y de almacenamiento. Contribuciones frontend y fullstack.",
     "dgac_desc": "Aplicación interna para la gestión del tráfico aéreo.",
-    "moodoow_desc": "Plataforma de aplicaciones móviles white-label para clubes deportivos — impulsando apps como USM Sapiac, mejorando la experiencia de los aficionados.",
+    "moodoow_desc": "Plataforma de aplicaciones móviles white-label para clubes deportivos, que impulsa apps como USM Sapiac para mejorar la experiencia de los aficionados.",
     "qb3_desc": "Proyecto Web3. Proyecto final para la certificación de desarrollador blockchain de Alyra.",
     "amate_desc": "Proyecto indie hacker / solopreneur"
   },
   "cta": {
-    "title": "¿Listo para trabajar juntos?",
-    "subtitle": "Hablemos de tu proyecto y veamos cómo puedo ayudarte.",
-    "button": "Contactar"
+    "title": "háblame de tu negocio",
+    "subtitle": "Escríbeme en Malt o reserva una llamada de 30 minutos: me cuentas tu necesidad y te digo con franqueza si puedo ayudarte y cómo."
+  },
+  "contact": {
+    "malt": "Contáctame",
+    "call": "Reservar una llamada de 30 min",
+    "call_short": "Reservar llamada",
+    "projects": "Ver mis proyectos",
+    "resume": "CV",
+    "linkedin": "LinkedIn",
+    "malt_profile": "Perfil de Malt",
+    "github": "GitHub",
+    "email": "Correo",
+    "whatsapp": "WhatsApp",
+    "back_to_top": "Volver arriba",
+    "call_tiny": "llamada 30 min"
   }
 }

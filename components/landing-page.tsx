@@ -1,37 +1,44 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
-import { HeroSectionMobile } from "@/components/hero-section/hero-section-mobile";
+import { ArrowUpRight } from "lucide-react";
+import { HeroSection } from "@/components/hero-section/hero-section";
 import { AboutSection } from "@/components/about-section/about-section";
 import { ServicesSection } from "@/components/services-section/services-section";
-import { SkillsSection } from "@/components/skills-section/skills-section";
 import { ProjectsSection } from "@/components/projects-section/projects-section";
-import { HeroSectionDesktop } from "@/components/hero-section/hero-section-desktop";
-import Link from "next/link";
+import { SectionTitle } from "@/components/section-title/section-title";
+import { ChannelList } from "@/components/social-links/social-links";
 import { useTranslations } from "next-intl";
+import { CALENDLY_URL, MALT_URL } from "@/lib/links";
+import { buttonPrimary, buttonSecondary } from "@/lib/button-styles";
 
 const LandingPage: React.FC = () => {
-  const isMobile = useIsMobile();
   const t = useTranslations("cta");
+  const tContact = useTranslations("contact");
 
   return (
     <main className="min-h-screen bg-background">
-      {isMobile ? <HeroSectionMobile /> : <HeroSectionDesktop />}
+      <HeroSection />
       <AboutSection />
       <ServicesSection />
-      <SkillsSection />
       <ProjectsSection />
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-medium tracking-[0.25em] uppercase mb-8">{t("title")}</h2>
-          <p className="text-xl text-muted-foreground mb-8">{t("subtitle")}</p>
-          <Button asChild variant="outline" size="lg">
-            <Link href="https://www.malt.fr/profile/jeancharlesbarq" target="_blank">
-              {t("button")} <ArrowRight className="h-4 w-4 ml-2" />
-            </Link>
-          </Button>
+
+      <section id="contact" className="px-6 pb-16 pt-20 md:px-12 lg:pt-24">
+        <div className="mx-auto max-w-6xl">
+          <SectionTitle>{t("title")}</SectionTitle>
+          <p className="max-w-[52ch] text-xl leading-relaxed text-foreground/80">{t("subtitle")}</p>
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <a href={MALT_URL} target="_blank" rel="noopener noreferrer" className={buttonPrimary}>
+              {tContact("malt")} <ArrowUpRight className="size-4" aria-hidden="true" />
+            </a>
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className={buttonSecondary}>
+              {tContact("call")} <ArrowUpRight className="size-4" aria-hidden="true" />
+            </a>
+          </div>
+
+          <div className="mt-20 flex flex-col gap-4 border-t border-border pt-5 md:flex-row md:items-center md:justify-between">
+            <ChannelList />
+            <span className="font-mono text-xs text-muted-foreground">a-mate.tech · Jean-Charles Barq</span>
+          </div>
         </div>
       </section>
     </main>
