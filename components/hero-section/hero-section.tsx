@@ -16,7 +16,7 @@ import { CALENDLY_URL, MALT_URL, RESUME_URLS } from "@/lib/links";
 //   are both centered on the vertical axis. The photo width follows the
 //   viewport height.
 // - Row 2: the method as a strip on a hairline: [01] → [02] → [03].
-// Below `lg`: text, actions, the steps as a list, then the figure.
+// Below `lg`: role, offer, the steps (three columns), actions, then the figure.
 // Blue stays on type; the buttons are light fill + outline (lib/button-styles).
 export const HeroSection = () => {
   const t = useTranslations("hero");
@@ -34,8 +34,10 @@ export const HeroSection = () => {
             from the signature to the role, one headline line of air before the
             offer, then two buttons of equal height. Centered on the page's
             vertical axis, like the photo. */}
-        <div className="relative z-10 order-1 lg:order-none lg:col-span-7">
-          <h1>
+        {/* `contents` below `lg` too, so the steps can slot between the offer
+            and the actions on mobile */}
+        <div className="contents lg:relative lg:z-10 lg:col-span-7 lg:block">
+          <h1 className="order-1 lg:order-none">
             {/* Signature line: the blue a-mate logo + a-mate.tech. The name is
                 shown under the photo; here it stays for search engines and
                 screen readers. */}
@@ -49,13 +51,13 @@ export const HeroSection = () => {
             </span>
           </h1>
 
-          <p className="mt-10 max-w-[48ch] text-lg font-light leading-relaxed text-primary-soft lg:mt-16 lg:text-xl">
+          <p className="order-2 mt-10 max-w-[48ch] text-lg font-light lg:order-none leading-relaxed text-primary-soft lg:mt-16 lg:text-xl">
             {t.rich("accroche", {
               strong: (chunks) => <strong className="font-light">{chunks}</strong>,
             })}
           </p>
 
-          <div id="hero-actions" className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center lg:mt-10">
+          <div id="hero-actions" className="order-4 mt-8 flex flex-col gap-3 sm:flex-row sm:items-center lg:order-none lg:mt-10">
             <a href={MALT_URL} target="_blank" rel="noopener noreferrer" className={buttonPrimary}>
               {tContact("malt")} <ArrowUpRight className="size-4" aria-hidden="true" />
             </a>
@@ -70,7 +72,7 @@ export const HeroSection = () => {
             grayscale photo draws the shadows, and a `lighten` layer lifts
             those shadows to the page ground. Under it: the name in the site's
             bracket grammar, then the stack and the links. */}
-        <figure className="order-3 mt-14 w-full max-w-sm lg:order-none lg:col-span-4 lg:col-start-9 lg:mt-0 lg:w-[min(400px,calc((100svh-24rem)*0.8))] lg:max-w-none lg:justify-self-end">
+        <figure className="order-5 mt-14 w-full max-w-sm lg:order-none lg:col-span-4 lg:col-start-9 lg:mt-0 lg:w-[min(400px,calc((100svh-24rem)*0.8))] lg:max-w-none lg:justify-self-end">
           <div
             className="relative isolate aspect-[4/5] w-full overflow-hidden rounded-md border border-border"
             style={{ backgroundColor: "color-mix(in srgb, var(--primary) 48%, var(--background))" }}
@@ -116,7 +118,7 @@ export const HeroSection = () => {
 
       {/* The method as a strip on a hairline, three columns on every screen
           (on phones the index sits above each label) */}
-      <ol className="relative z-10 order-2 mt-12 grid grid-cols-3 gap-4 border-t border-border pt-6 font-mono text-sm text-primary lg:order-none lg:mt-0 lg:gap-6 lg:self-end lg:text-xl">
+      <ol className="relative z-10 order-3 mt-8 grid grid-cols-3 gap-4 border-t border-border pt-6 font-mono text-sm text-primary lg:order-none lg:mt-0 lg:gap-6 lg:self-end lg:text-xl">
         {steps.map((step, index) => (
           <li key={index} className="flex flex-col gap-1 lg:flex-row lg:items-center lg:gap-4">
             <span className="text-xs text-primary/70 lg:text-sm">[0{index + 1}]</span>
